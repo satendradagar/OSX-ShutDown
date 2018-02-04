@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A0B57D3201DA7CF00A7002B /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B57D1201DA7CF00A7002B /* STPrivilegedTask.m */; };
+		9A0B57D4201DA7CF00A7002B /* TaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B57D2201DA7CF00A7002B /* TaskManager.m */; };
+		9A2E4796202334A100AA0457 /* isightdisabler5.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 9A2E4795202334A100AA0457 /* isightdisabler5.scpt */; };
+		9A2F41112024B7E900EF8783 /* FirewallDisable.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2F410F2024B7E900EF8783 /* FirewallDisable.sh */; };
+		9A2F41122024B7E900EF8783 /* FirewallEnable.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2F41102024B7E900EF8783 /* FirewallEnable.sh */; };
+		9A2F41142024BA1F00EF8783 /* FirewallStatus.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2F41132024BA1F00EF8783 /* FirewallStatus.sh */; };
+		9A2F41162024C24000EF8783 /* Dictionary+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F41152024C24000EF8783 /* Dictionary+Utility.swift */; };
+		9A35BD622022D91300316C59 /* ProfileUninstaller.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A35BD602022D91200316C59 /* ProfileUninstaller.sh */; };
+		9A35BD632022D91300316C59 /* ProfileInstaller.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A35BD612022D91300316C59 /* ProfileInstaller.sh */; };
+		9A6FF41F1FFD1F8B00756E0C /* MenuBarActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FF41E1FFD1F8B00756E0C /* MenuBarActionHandler.swift */; };
+		9A752C152014EEE700A39BA7 /* MuteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A752C142014EEE700A39BA7 /* MuteManager.swift */; };
+		9A752C182014FE7C00A39BA7 /* mute_sript.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 9A752C162014FE7C00A39BA7 /* mute_sript.scpt */; };
+		9A752C192014FE7C00A39BA7 /* volume_sript.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 9A752C172014FE7C00A39BA7 /* volume_sript.scpt */; };
+		9A89D8141FF01591007881E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89D8131FF01591007881E8 /* AppDelegate.swift */; };
+		9A89D8161FF01591007881E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A89D8151FF01591007881E8 /* Assets.xcassets */; };
+		9A89D8191FF01591007881E8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A89D8171FF01591007881E8 /* MainMenu.xib */; };
+		9A89D8251FF01592007881E8 /* Firewall_ControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89D8241FF01592007881E8 /* Firewall_ControlTests.swift */; };
+		9A89D8301FF01592007881E8 /* Firewall_ControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89D82F1FF01592007881E8 /* Firewall_ControlUITests.swift */; };
+		9A9F51B520184A6D00057DEC /* camera-disabler.mobileconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9A9F51B420184A6D00057DEC /* camera-disabler.mobileconfig */; };
+		9AC5D31C20222A59002CC0E2 /* PreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A89D8211FF01591007881E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A89D8081FF01591007881E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A89D80F1FF01591007881E8;
+			remoteInfo = "Firewall Control";
+		};
+		9A89D82C1FF01592007881E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A89D8081FF01591007881E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A89D80F1FF01591007881E8;
+			remoteInfo = "Firewall Control";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9A0B57CF201DA7CF00A7002B /* TaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskManager.h; sourceTree = "<group>"; };
+		9A0B57D0201DA7CF00A7002B /* STPrivilegedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPrivilegedTask.h; sourceTree = "<group>"; };
+		9A0B57D1201DA7CF00A7002B /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPrivilegedTask.m; sourceTree = "<group>"; };
+		9A0B57D2201DA7CF00A7002B /* TaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskManager.m; sourceTree = "<group>"; };
+		9A0B57D5201DB16B00A7002B /* ShutDown-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShutDown-Bridging-Header.h"; sourceTree = "<group>"; };
+		9A2E4795202334A100AA0457 /* isightdisabler5.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = isightdisabler5.scpt; sourceTree = "<group>"; };
+		9A2F410F2024B7E900EF8783 /* FirewallDisable.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallDisable.sh; sourceTree = "<group>"; };
+		9A2F41102024B7E900EF8783 /* FirewallEnable.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallEnable.sh; sourceTree = "<group>"; };
+		9A2F41132024BA1F00EF8783 /* FirewallStatus.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallStatus.sh; sourceTree = "<group>"; };
+		9A2F41152024C24000EF8783 /* Dictionary+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Utility.swift"; sourceTree = "<group>"; };
+		9A35BD602022D91200316C59 /* ProfileUninstaller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ProfileUninstaller.sh; sourceTree = "<group>"; };
+		9A35BD612022D91300316C59 /* ProfileInstaller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ProfileInstaller.sh; sourceTree = "<group>"; };
+		9A6FF41E1FFD1F8B00756E0C /* MenuBarActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarActionHandler.swift; sourceTree = "<group>"; };
+		9A752C142014EEE700A39BA7 /* MuteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteManager.swift; sourceTree = "<group>"; };
+		9A752C162014FE7C00A39BA7 /* mute_sript.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mute_sript.scpt; sourceTree = "<group>"; };
+		9A752C172014FE7C00A39BA7 /* volume_sript.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = volume_sript.scpt; sourceTree = "<group>"; };
+		9A89D8101FF01591007881E8 /* ShutDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShutDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A89D8131FF01591007881E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A89D8151FF01591007881E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A89D8181FF01591007881E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9A89D81A1FF01591007881E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A89D81B1FF01591007881E8 /* Firewall_Control.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Firewall_Control.entitlements; sourceTree = "<group>"; };
+		9A89D8201FF01591007881E8 /* ShutDownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShutDownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A89D8241FF01592007881E8 /* Firewall_ControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firewall_ControlTests.swift; sourceTree = "<group>"; };
+		9A89D8261FF01592007881E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A89D82B1FF01592007881E8 /* ShutDownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShutDownUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A89D82F1FF01592007881E8 /* Firewall_ControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firewall_ControlUITests.swift; sourceTree = "<group>"; };
+		9A89D8311FF01592007881E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A9F51B220183D5900057DEC /* ShutDown-app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ShutDown-app.png"; sourceTree = "<group>"; };
+		9A9F51B420184A6D00057DEC /* camera-disabler.mobileconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "camera-disabler.mobileconfig"; sourceTree = "<group>"; };
+		9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesStore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A89D80D1FF01591007881E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A89D81D1FF01591007881E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A89D8281FF01592007881E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A0B57CE201DA7CF00A7002B /* TaskManager */ = {
+			isa = PBXGroup;
+			children = (
+				9A0B57CF201DA7CF00A7002B /* TaskManager.h */,
+				9A0B57D2201DA7CF00A7002B /* TaskManager.m */,
+				9A0B57D0201DA7CF00A7002B /* STPrivilegedTask.h */,
+				9A0B57D1201DA7CF00A7002B /* STPrivilegedTask.m */,
+			);
+			path = TaskManager;
+			sourceTree = "<group>";
+		};
+		9A6FF41D1FFD1F8B00756E0C /* MenuBarActionHandler */ = {
+			isa = PBXGroup;
+			children = (
+				9A6FF41E1FFD1F8B00756E0C /* MenuBarActionHandler.swift */,
+			);
+			path = MenuBarActionHandler;
+			sourceTree = "<group>";
+		};
+		9A752C132014EE8900A39BA7 /* MuteManager */ = {
+			isa = PBXGroup;
+			children = (
+				9A752C162014FE7C00A39BA7 /* mute_sript.scpt */,
+				9A752C172014FE7C00A39BA7 /* volume_sript.scpt */,
+				9A752C142014EEE700A39BA7 /* MuteManager.swift */,
+			);
+			path = MuteManager;
+			sourceTree = "<group>";
+		};
+		9A89D8071FF01591007881E8 = {
+			isa = PBXGroup;
+			children = (
+				9A89D8121FF01591007881E8 /* Firewall Control */,
+				9A9F51B120183D5900057DEC /* Docs */,
+				9A89D8231FF01592007881E8 /* Firewall ControlTests */,
+				9A89D82E1FF01592007881E8 /* Firewall ControlUITests */,
+				9A89D8111FF01591007881E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9A89D8111FF01591007881E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A89D8101FF01591007881E8 /* ShutDown.app */,
+				9A89D8201FF01591007881E8 /* ShutDownTests.xctest */,
+				9A89D82B1FF01592007881E8 /* ShutDownUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A89D8121FF01591007881E8 /* Firewall Control */ = {
+			isa = PBXGroup;
+			children = (
+				9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */,
+				9A9F51B320184A3700057DEC /* iSightManager */,
+				9A89D8131FF01591007881E8 /* AppDelegate.swift */,
+				9A0B57CE201DA7CF00A7002B /* TaskManager */,
+				9A752C132014EE8900A39BA7 /* MuteManager */,
+				9A6FF41D1FFD1F8B00756E0C /* MenuBarActionHandler */,
+				9A89D8151FF01591007881E8 /* Assets.xcassets */,
+				9A89D8171FF01591007881E8 /* MainMenu.xib */,
+				9A89D81A1FF01591007881E8 /* Info.plist */,
+				9A0B57D5201DB16B00A7002B /* ShutDown-Bridging-Header.h */,
+				9A89D81B1FF01591007881E8 /* Firewall_Control.entitlements */,
+				9A2F41152024C24000EF8783 /* Dictionary+Utility.swift */,
+			);
+			path = "Firewall Control";
+			sourceTree = "<group>";
+		};
+		9A89D8231FF01592007881E8 /* Firewall ControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A89D8241FF01592007881E8 /* Firewall_ControlTests.swift */,
+				9A89D8261FF01592007881E8 /* Info.plist */,
+			);
+			path = "Firewall ControlTests";
+			sourceTree = "<group>";
+		};
+		9A89D82E1FF01592007881E8 /* Firewall ControlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9A89D82F1FF01592007881E8 /* Firewall_ControlUITests.swift */,
+				9A89D8311FF01592007881E8 /* Info.plist */,
+			);
+			path = "Firewall ControlUITests";
+			sourceTree = "<group>";
+		};
+		9A9F51B120183D5900057DEC /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				9A9F51B220183D5900057DEC /* ShutDown-app.png */,
+			);
+			name = Docs;
+			path = "Firewall Control/Docs";
+			sourceTree = "<group>";
+		};
+		9A9F51B320184A3700057DEC /* iSightManager */ = {
+			isa = PBXGroup;
+			children = (
+				9A9F51B420184A6D00057DEC /* camera-disabler.mobileconfig */,
+				9A2E4795202334A100AA0457 /* isightdisabler5.scpt */,
+				9A35BD612022D91300316C59 /* ProfileInstaller.sh */,
+				9A35BD602022D91200316C59 /* ProfileUninstaller.sh */,
+				9A2F41132024BA1F00EF8783 /* FirewallStatus.sh */,
+				9A2F410F2024B7E900EF8783 /* FirewallDisable.sh */,
+				9A2F41102024B7E900EF8783 /* FirewallEnable.sh */,
+			);
+			path = iSightManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A89D80F1FF01591007881E8 /* ShutDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A89D8341FF01592007881E8 /* Build configuration list for PBXNativeTarget "ShutDown" */;
+			buildPhases = (
+				9A89D80C1FF01591007881E8 /* Sources */,
+				9A89D80D1FF01591007881E8 /* Frameworks */,
+				9A89D80E1FF01591007881E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShutDown;
+			productName = "Firewall Control";
+			productReference = 9A89D8101FF01591007881E8 /* ShutDown.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A89D81F1FF01591007881E8 /* ShutDownTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A89D8371FF01592007881E8 /* Build configuration list for PBXNativeTarget "ShutDownTests" */;
+			buildPhases = (
+				9A89D81C1FF01591007881E8 /* Sources */,
+				9A89D81D1FF01591007881E8 /* Frameworks */,
+				9A89D81E1FF01591007881E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A89D8221FF01591007881E8 /* PBXTargetDependency */,
+			);
+			name = ShutDownTests;
+			productName = "Firewall ControlTests";
+			productReference = 9A89D8201FF01591007881E8 /* ShutDownTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9A89D82A1FF01592007881E8 /* ShutDownUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A89D83A1FF01592007881E8 /* Build configuration list for PBXNativeTarget "ShutDownUITests" */;
+			buildPhases = (
+				9A89D8271FF01592007881E8 /* Sources */,
+				9A89D8281FF01592007881E8 /* Frameworks */,
+				9A89D8291FF01592007881E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A89D82D1FF01592007881E8 /* PBXTargetDependency */,
+			);
+			name = ShutDownUITests;
+			productName = "Firewall ControlUITests";
+			productReference = 9A89D82B1FF01592007881E8 /* ShutDownUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A89D8081FF01591007881E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Satendra Dagar";
+				TargetAttributes = {
+					9A89D80F1FF01591007881E8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					9A89D81F1FF01591007881E8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9A89D80F1FF01591007881E8;
+					};
+					9A89D82A1FF01592007881E8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9A89D80F1FF01591007881E8;
+					};
+				};
+			};
+			buildConfigurationList = 9A89D80B1FF01591007881E8 /* Build configuration list for PBXProject "ShutDown" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A89D8071FF01591007881E8;
+			productRefGroup = 9A89D8111FF01591007881E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A89D80F1FF01591007881E8 /* ShutDown */,
+				9A89D81F1FF01591007881E8 /* ShutDownTests */,
+				9A89D82A1FF01592007881E8 /* ShutDownUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A89D80E1FF01591007881E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A2F41112024B7E900EF8783 /* FirewallDisable.sh in Resources */,
+				9A35BD622022D91300316C59 /* ProfileUninstaller.sh in Resources */,
+				9A89D8161FF01591007881E8 /* Assets.xcassets in Resources */,
+				9A2F41142024BA1F00EF8783 /* FirewallStatus.sh in Resources */,
+				9A752C182014FE7C00A39BA7 /* mute_sript.scpt in Resources */,
+				9A752C192014FE7C00A39BA7 /* volume_sript.scpt in Resources */,
+				9A89D8191FF01591007881E8 /* MainMenu.xib in Resources */,
+				9A2E4796202334A100AA0457 /* isightdisabler5.scpt in Resources */,
+				9A2F41122024B7E900EF8783 /* FirewallEnable.sh in Resources */,
+				9A9F51B520184A6D00057DEC /* camera-disabler.mobileconfig in Resources */,
+				9A35BD632022D91300316C59 /* ProfileInstaller.sh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A89D81E1FF01591007881E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A89D8291FF01592007881E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A89D80C1FF01591007881E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A89D8141FF01591007881E8 /* AppDelegate.swift in Sources */,
+				9A2F41162024C24000EF8783 /* Dictionary+Utility.swift in Sources */,
+				9A6FF41F1FFD1F8B00756E0C /* MenuBarActionHandler.swift in Sources */,
+				9AC5D31C20222A59002CC0E2 /* PreferencesStore.swift in Sources */,
+				9A0B57D3201DA7CF00A7002B /* STPrivilegedTask.m in Sources */,
+				9A752C152014EEE700A39BA7 /* MuteManager.swift in Sources */,
+				9A0B57D4201DA7CF00A7002B /* TaskManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A89D81C1FF01591007881E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A89D8251FF01592007881E8 /* Firewall_ControlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A89D8271FF01592007881E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A89D8301FF01592007881E8 /* Firewall_ControlUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A89D8221FF01591007881E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A89D80F1FF01591007881E8 /* ShutDown */;
+			targetProxy = 9A89D8211FF01591007881E8 /* PBXContainerItemProxy */;
+		};
+		9A89D82D1FF01592007881E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A89D80F1FF01591007881E8 /* ShutDown */;
+			targetProxy = 9A89D82C1FF01592007881E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A89D8171FF01591007881E8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A89D8181FF01591007881E8 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A89D8321FF01592007881E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9A89D8331FF01592007881E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		9A89D8351FF01592007881E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Firewall Control/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.satendra.Firewall-Control";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Firewall Control/ShutDown-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		9A89D8361FF01592007881E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Firewall Control/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.satendra.Firewall-Control";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Firewall Control/ShutDown-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		9A89D8381FF01592007881E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Firewall ControlTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.satendra.Firewall-ControlTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShutDown.app/Contents/MacOS/ShutDown";
+			};
+			name = Debug;
+		};
+		9A89D8391FF01592007881E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Firewall ControlTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.satendra.Firewall-ControlTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShutDown.app/Contents/MacOS/ShutDown";
+			};
+			name = Release;
+		};
+		9A89D83B1FF01592007881E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Firewall ControlUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.satendra.Firewall-ControlUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "Firewall Control";
+			};
+			name = Debug;
+		};
+		9A89D83C1FF01592007881E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Firewall ControlUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.satendra.Firewall-ControlUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "Firewall Control";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A89D80B1FF01591007881E8 /* Build configuration list for PBXProject "ShutDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A89D8321FF01592007881E8 /* Debug */,
+				9A89D8331FF01592007881E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A89D8341FF01592007881E8 /* Build configuration list for PBXNativeTarget "ShutDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A89D8351FF01592007881E8 /* Debug */,
+				9A89D8361FF01592007881E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A89D8371FF01592007881E8 /* Build configuration list for PBXNativeTarget "ShutDownTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A89D8381FF01592007881E8 /* Debug */,
+				9A89D8391FF01592007881E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A89D83A1FF01592007881E8 /* Build configuration list for PBXNativeTarget "ShutDownUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A89D83B1FF01592007881E8 /* Debug */,
+				9A89D83C1FF01592007881E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A89D8081FF01591007881E8 /* Project object */;
+}
