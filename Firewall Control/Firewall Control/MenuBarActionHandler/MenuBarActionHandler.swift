@@ -47,7 +47,8 @@ class MenuBarActionHandler: NSMenu {
     }
     
     @IBAction func masterSwitchClicked(_ sender: NSMenuItem) {
-    
+        let status = MasterSwitchController.sharedInstance.isPowered
+        MasterSwitchController.sharedInstance.toggleMasterSwitch(status: !status)
     }
     
     @IBAction func cameraOffClicked(_ sender: NSMenuItem) {
@@ -114,6 +115,7 @@ class MenuBarActionHandler: NSMenu {
         self.updateMenuForMicVolume()
         updateMenuForCamera()
         updateMenuForFirewall()
+        updateMenuForMasterSwitch()
     }
     
     func updateMenuForMicVolume() {
@@ -161,6 +163,17 @@ class MenuBarActionHandler: NSMenu {
         }
         else{
             self.firewallOff.title = "Turn Off Firewall"
+        }
+    }
+    
+    func updateMenuForMasterSwitch() {
+        
+        let status = MasterSwitchController.sharedInstance.isPowered
+        if status == false {
+            self.masterSwitch.title = "Connect Internet and Bluetooth"
+        }
+        else{
+            self.masterSwitch.title = "Disconnect Internet and Bluetooth"
         }
     }
 }

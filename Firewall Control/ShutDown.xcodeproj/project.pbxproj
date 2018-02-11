@@ -26,6 +26,8 @@
 		9A89D8251FF01592007881E8 /* Firewall_ControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89D8241FF01592007881E8 /* Firewall_ControlTests.swift */; };
 		9A89D8301FF01592007881E8 /* Firewall_ControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89D82F1FF01592007881E8 /* Firewall_ControlUITests.swift */; };
 		9A9F51B520184A6D00057DEC /* camera-disabler.mobileconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9A9F51B420184A6D00057DEC /* camera-disabler.mobileconfig */; };
+		9AB1D2D3202DE1D400DD8DC9 /* MasterSwitchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1D2D2202DE1D400DD8DC9 /* MasterSwitchController.swift */; };
+		9AB1D2D5202DF9F900DD8DC9 /* blueutil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1D2D4202DF9F800DD8DC9 /* blueutil.m */; };
 		9AC5D31C20222A59002CC0E2 /* PreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,9 @@
 		9A89D8311FF01592007881E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9F51B220183D5900057DEC /* ShutDown-app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ShutDown-app.png"; sourceTree = "<group>"; };
 		9A9F51B420184A6D00057DEC /* camera-disabler.mobileconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "camera-disabler.mobileconfig"; sourceTree = "<group>"; };
+		9AB1D2D2202DE1D400DD8DC9 /* MasterSwitchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterSwitchController.swift; sourceTree = "<group>"; };
+		9AB1D2D4202DF9F800DD8DC9 /* blueutil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blueutil.m; sourceTree = "<group>"; };
+		9AB1D2D6202DFA4200DD8DC9 /* blueutil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blueutil.h; sourceTree = "<group>"; };
 		9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */,
+				9AB1D2D1202DE1C200DD8DC9 /* MasterSwitchController */,
 				9A9F51B320184A3700057DEC /* iSightManager */,
 				9A89D8131FF01591007881E8 /* AppDelegate.swift */,
 				9A0B57CE201DA7CF00A7002B /* TaskManager */,
@@ -213,6 +219,16 @@
 				9A2F41102024B7E900EF8783 /* FirewallEnable.sh */,
 			);
 			path = iSightManager;
+			sourceTree = "<group>";
+		};
+		9AB1D2D1202DE1C200DD8DC9 /* MasterSwitchController */ = {
+			isa = PBXGroup;
+			children = (
+				9AB1D2D6202DFA4200DD8DC9 /* blueutil.h */,
+				9AB1D2D4202DF9F800DD8DC9 /* blueutil.m */,
+				9AB1D2D2202DE1D400DD8DC9 /* MasterSwitchController.swift */,
+			);
+			path = MasterSwitchController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,10 +379,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A89D8141FF01591007881E8 /* AppDelegate.swift in Sources */,
+				9AB1D2D3202DE1D400DD8DC9 /* MasterSwitchController.swift in Sources */,
 				9A2F41162024C24000EF8783 /* Dictionary+Utility.swift in Sources */,
 				9A6FF41F1FFD1F8B00756E0C /* MenuBarActionHandler.swift in Sources */,
 				9AC5D31C20222A59002CC0E2 /* PreferencesStore.swift in Sources */,
 				9A0B57D3201DA7CF00A7002B /* STPrivilegedTask.m in Sources */,
+				9AB1D2D5202DF9F900DD8DC9 /* blueutil.m in Sources */,
 				9A752C152014EEE700A39BA7 /* MuteManager.swift in Sources */,
 				9A0B57D4201DA7CF00A7002B /* TaskManager.m in Sources */,
 			);

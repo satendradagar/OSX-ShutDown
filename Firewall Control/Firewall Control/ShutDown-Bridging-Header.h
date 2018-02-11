@@ -10,5 +10,5 @@
 #define ShutDown_Bridging_Header_h
 
 #import "TaskManager.h"
-
+#import "blueutil.h"
 #endif /* ShutDown_Bridging_Header_h */
