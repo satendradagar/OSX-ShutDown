@@ -16,6 +16,7 @@
 		9A2F41162024C24000EF8783 /* Dictionary+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F41152024C24000EF8783 /* Dictionary+Utility.swift */; };
 		9A35BD622022D91300316C59 /* ProfileUninstaller.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A35BD602022D91200316C59 /* ProfileUninstaller.sh */; };
 		9A35BD632022D91300316C59 /* ProfileInstaller.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A35BD612022D91300316C59 /* ProfileInstaller.sh */; };
+		9A4A2E872035EA3000C606D3 /* NSUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A2E862035EA2F00C606D3 /* NSUtilities.swift */; };
 		9A6FF41F1FFD1F8B00756E0C /* MenuBarActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FF41E1FFD1F8B00756E0C /* MenuBarActionHandler.swift */; };
 		9A752C152014EEE700A39BA7 /* MuteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A752C142014EEE700A39BA7 /* MuteManager.swift */; };
 		9A752C182014FE7C00A39BA7 /* mute_sript.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 9A752C162014FE7C00A39BA7 /* mute_sript.scpt */; };
@@ -29,6 +30,7 @@
 		9AB1D2D3202DE1D400DD8DC9 /* MasterSwitchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1D2D2202DE1D400DD8DC9 /* MasterSwitchController.swift */; };
 		9AB1D2D5202DF9F900DD8DC9 /* blueutil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1D2D4202DF9F800DD8DC9 /* blueutil.m */; };
 		9AC5D31C20222A59002CC0E2 /* PreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */; };
+		9ADCD29F20384DE00071D17B /* ProcessAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADCD29E20384DE00071D17B /* ProcessAccessor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,7 @@
 		9A2F41152024C24000EF8783 /* Dictionary+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Utility.swift"; sourceTree = "<group>"; };
 		9A35BD602022D91200316C59 /* ProfileUninstaller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ProfileUninstaller.sh; sourceTree = "<group>"; };
 		9A35BD612022D91300316C59 /* ProfileInstaller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ProfileInstaller.sh; sourceTree = "<group>"; };
+		9A4A2E862035EA2F00C606D3 /* NSUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUtilities.swift; sourceTree = "<group>"; };
 		9A6FF41E1FFD1F8B00756E0C /* MenuBarActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarActionHandler.swift; sourceTree = "<group>"; };
 		9A752C142014EEE700A39BA7 /* MuteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteManager.swift; sourceTree = "<group>"; };
 		9A752C162014FE7C00A39BA7 /* mute_sript.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mute_sript.scpt; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 		9AB1D2D4202DF9F800DD8DC9 /* blueutil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blueutil.m; sourceTree = "<group>"; };
 		9AB1D2D6202DFA4200DD8DC9 /* blueutil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blueutil.h; sourceTree = "<group>"; };
 		9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesStore.swift; sourceTree = "<group>"; };
+		9ADCD29D20384DE00071D17B /* ProcessAccessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProcessAccessor.h; path = "Firewall Control/ProcessAccess/ProcessAccessor.h"; sourceTree = SOURCE_ROOT; };
+		9ADCD29E20384DE00071D17B /* ProcessAccessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ProcessAccessor.m; path = "Firewall Control/ProcessAccess/ProcessAccessor.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,8 @@
 				9A0B57D2201DA7CF00A7002B /* TaskManager.m */,
 				9A0B57D0201DA7CF00A7002B /* STPrivilegedTask.h */,
 				9A0B57D1201DA7CF00A7002B /* STPrivilegedTask.m */,
+				9ADCD29D20384DE00071D17B /* ProcessAccessor.h */,
+				9ADCD29E20384DE00071D17B /* ProcessAccessor.m */,
 			);
 			path = TaskManager;
 			sourceTree = "<group>";
@@ -163,6 +170,7 @@
 		9A89D8121FF01591007881E8 /* Firewall Control */ = {
 			isa = PBXGroup;
 			children = (
+				9A4A2E862035EA2F00C606D3 /* NSUtilities.swift */,
 				9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */,
 				9AB1D2D1202DE1C200DD8DC9 /* MasterSwitchController */,
 				9A9F51B320184A3700057DEC /* iSightManager */,
@@ -379,12 +387,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A89D8141FF01591007881E8 /* AppDelegate.swift in Sources */,
+				9A4A2E872035EA3000C606D3 /* NSUtilities.swift in Sources */,
 				9AB1D2D3202DE1D400DD8DC9 /* MasterSwitchController.swift in Sources */,
 				9A2F41162024C24000EF8783 /* Dictionary+Utility.swift in Sources */,
 				9A6FF41F1FFD1F8B00756E0C /* MenuBarActionHandler.swift in Sources */,
 				9AC5D31C20222A59002CC0E2 /* PreferencesStore.swift in Sources */,
 				9A0B57D3201DA7CF00A7002B /* STPrivilegedTask.m in Sources */,
 				9AB1D2D5202DF9F900DD8DC9 /* blueutil.m in Sources */,
+				9ADCD29F20384DE00071D17B /* ProcessAccessor.m in Sources */,
 				9A752C152014EEE700A39BA7 /* MuteManager.swift in Sources */,
 				9A0B57D4201DA7CF00A7002B /* TaskManager.m in Sources */,
 			);

@@ -11,4 +11,6 @@
 
 #import "TaskManager.h"
 #import "blueutil.h"
+#import "ProcessAccessor.h"
+
 #endif /* ShutDown_Bridging_Header_h */

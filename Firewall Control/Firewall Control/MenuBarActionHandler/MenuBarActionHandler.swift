@@ -8,9 +8,12 @@
 
 import Foundation
 import Cocoa
+import AVFoundation
 
 class MenuBarActionHandler: NSMenu {
-    
+
+    weak var statusItem: NSStatusItem?
+
     @IBOutlet weak var masterSwitch: NSMenuItem!
     
     @IBOutlet weak var cameraOff: NSMenuItem!
@@ -27,8 +30,18 @@ class MenuBarActionHandler: NSMenu {
         super.awakeFromNib()
         self.delegate = self
         self.updateMenuWithCurrentStatus()
+        let device = AVCaptureDevice.devices(for: .video)
+        let selector = #selector(didReceivedCameraChange(notification:))
+        //wsnnn fix (https://github.com/gyetvan-andras/cocoa-waveform/issues/5#issuecomment-19802466)
+        NotificationCenter.default.addObserver(self, selector:selector , name: .AVCaptureInputPortFormatDescriptionDidChange, object: nil)
+//        static let AVCaptureDeviceSubjectAreaDidChange
+        print(device)
     }
     
+    @objc func didReceivedCameraChange(notification:Notification)  {
+        print("Changed\(notification)")
+        
+    }
     @IBAction func didClickRecordAudio(_ sender: NSMenuItem) {
         print(MuteManager.currentState())
         print(MuteManager.currentStateFixed())
@@ -61,6 +74,33 @@ class MenuBarActionHandler: NSMenu {
             }) { (task) in
 
             }
+            let pidSet = ProcessAccessor.pidsAccessingPath("/Library/CoreMediaIO/Plug-Ins/DAL/AppleCamera.plugin/Contents/MacOS/AppleCamera")
+            print("\(pidSet)")
+            var pidsToKill = [NSNumber]()
+            var processNames = ""
+            
+            for pid in pidSet! {
+                let app = NSRunningApplication.init(processIdentifier: pid_t(pid))
+                if let name = app?.localizedName{
+                    if name == "ShutDown"{
+                        continue
+                    }
+                    pidsToKill.append(pid)
+                    processNames.append(name)
+                    processNames.append(", ")
+                }
+                print(app?.localizedName)
+            }
+            if (pidsToKill.count > 0){
+                let reply = NSUtilities.dialogOKCancel(question: "Few apps are already using Camera", text: "Are you sure you want to kill apps:\(processNames)")
+                if reply == true{
+                    for pid in pidsToKill {
+                        let app = NSRunningApplication.init(processIdentifier: pid_t(pid))
+                        app?.terminate()
+                    }
+                }
+            }
+            
         }
         else{
             TaskManager.runScript("ProfileUninstaller", withArgs: [], responseHandling: { (message) in
@@ -86,7 +126,8 @@ class MenuBarActionHandler: NSMenu {
             TaskManager.runScript("FirewallDisable", withArgs: [], responseHandling: { (message) in
                 print("\(String(describing: message))")
             }) { (task) in
-                
+                self.updateMenuForFirewall()
+
             }
 
         }
@@ -95,7 +136,8 @@ class MenuBarActionHandler: NSMenu {
             TaskManager.runScript("FirewallEnable", withArgs: [], responseHandling: { (message) in
                 print("\(String(describing: message))")
             }) { (task) in
-                
+                self.updateMenuForFirewall()
+
             }
 
         }
@@ -160,9 +202,13 @@ class MenuBarActionHandler: NSMenu {
         let status = globalFirewallStatus()
         if status == false {
             self.firewallOff.title = "Turn On Firewall"
+            self.statusItem?.image = #imageLiteral(resourceName: "toolbar_Off")
+
         }
         else{
             self.firewallOff.title = "Turn Off Firewall"
+            self.statusItem?.image = #imageLiteral(resourceName: "toolbar_On")
+
         }
     }
     

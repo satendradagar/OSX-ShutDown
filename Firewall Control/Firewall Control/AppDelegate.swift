@@ -37,14 +37,15 @@ import Foundation
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
-    @IBOutlet weak var menu: NSMenu!
+    @IBOutlet weak var menu: MenuBarActionHandler!
     var statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         statusItem.menu = menu //set the menu
-        statusItem.title = "Firewall Control"
-
+//        statusItem.title = "Firewall Control"
+        menu.statusItem = statusItem
+        menu.updateMenuForFirewall()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
