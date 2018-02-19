@@ -92,7 +92,9 @@ class MenuBarActionHandler: NSMenu {
                 print(app?.localizedName)
             }
             if (pidsToKill.count > 0){
-                let reply = NSUtilities.dialogOKCancel(question: "Few apps are already using Camera", text: "Are you sure you want to kill apps:\(processNames)")
+                
+                //"Are you sure you want to kill apps:\(processNames)"
+                let reply = NSUtilities.dialogOKCancel(question: "One or more apps are already using the Camera", text: "Do you want to Force Quit all apps using the Camera?")
                 if reply == true{
                     for pid in pidsToKill {
                         let app = NSRunningApplication.init(processIdentifier: pid_t(pid))
