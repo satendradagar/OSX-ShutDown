@@ -30,6 +30,7 @@
 		9AB1D2D3202DE1D400DD8DC9 /* MasterSwitchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1D2D2202DE1D400DD8DC9 /* MasterSwitchController.swift */; };
 		9AB1D2D5202DF9F900DD8DC9 /* blueutil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1D2D4202DF9F800DD8DC9 /* blueutil.m */; };
 		9AC5D31C20222A59002CC0E2 /* PreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */; };
+		9AD44E1820543B9E00F0BCFB /* FirewallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD44E1720543B9E00F0BCFB /* FirewallManager.swift */; };
 		9ADCD29F20384DE00071D17B /* ProcessAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADCD29E20384DE00071D17B /* ProcessAccessor.m */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		9AB1D2D4202DF9F800DD8DC9 /* blueutil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blueutil.m; sourceTree = "<group>"; };
 		9AB1D2D6202DFA4200DD8DC9 /* blueutil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blueutil.h; sourceTree = "<group>"; };
 		9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesStore.swift; sourceTree = "<group>"; };
+		9AD44E1720543B9E00F0BCFB /* FirewallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirewallManager.swift; sourceTree = "<group>"; };
 		9ADCD29D20384DE00071D17B /* ProcessAccessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProcessAccessor.h; path = "Firewall Control/ProcessAccess/ProcessAccessor.h"; sourceTree = SOURCE_ROOT; };
 		9ADCD29E20384DE00071D17B /* ProcessAccessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ProcessAccessor.m; path = "Firewall Control/ProcessAccess/ProcessAccessor.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -170,6 +172,7 @@
 		9A89D8121FF01591007881E8 /* Firewall Control */ = {
 			isa = PBXGroup;
 			children = (
+				9AD44E1620543B8B00F0BCFB /* FirewallManager */,
 				9A4A2E862035EA2F00C606D3 /* NSUtilities.swift */,
 				9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */,
 				9AB1D2D1202DE1C200DD8DC9 /* MasterSwitchController */,
@@ -237,6 +240,14 @@
 				9AB1D2D2202DE1D400DD8DC9 /* MasterSwitchController.swift */,
 			);
 			path = MasterSwitchController;
+			sourceTree = "<group>";
+		};
+		9AD44E1620543B8B00F0BCFB /* FirewallManager */ = {
+			isa = PBXGroup;
+			children = (
+				9AD44E1720543B9E00F0BCFB /* FirewallManager.swift */,
+			);
+			path = FirewallManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A89D8141FF01591007881E8 /* AppDelegate.swift in Sources */,
+				9AD44E1820543B9E00F0BCFB /* FirewallManager.swift in Sources */,
 				9A4A2E872035EA3000C606D3 /* NSUtilities.swift in Sources */,
 				9AB1D2D3202DE1D400DD8DC9 /* MasterSwitchController.swift in Sources */,
 				9A2F41162024C24000EF8783 /* Dictionary+Utility.swift in Sources */,
