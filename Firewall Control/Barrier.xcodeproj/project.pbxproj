@@ -30,6 +30,8 @@
 		9AB1D2D3202DE1D400DD8DC9 /* MasterSwitchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1D2D2202DE1D400DD8DC9 /* MasterSwitchController.swift */; };
 		9AB1D2D5202DF9F900DD8DC9 /* blueutil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1D2D4202DF9F800DD8DC9 /* blueutil.m */; };
 		9AC5D31C20222A59002CC0E2 /* PreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */; };
+		9AD137FE205E696600396465 /* FirewallStealthEnable.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9AD137FC205E696600396465 /* FirewallStealthEnable.sh */; };
+		9AD137FF205E696600396465 /* FirewallStealthDisable.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9AD137FD205E696600396465 /* FirewallStealthDisable.sh */; };
 		9AD44E1820543B9E00F0BCFB /* FirewallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD44E1720543B9E00F0BCFB /* FirewallManager.swift */; };
 		9ADCD29F20384DE00071D17B /* ProcessAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADCD29E20384DE00071D17B /* ProcessAccessor.m */; };
 /* End PBXBuildFile section */
@@ -69,16 +71,16 @@
 		9A752C142014EEE700A39BA7 /* MuteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteManager.swift; sourceTree = "<group>"; };
 		9A752C162014FE7C00A39BA7 /* mute_sript.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mute_sript.scpt; sourceTree = "<group>"; };
 		9A752C172014FE7C00A39BA7 /* volume_sript.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = volume_sript.scpt; sourceTree = "<group>"; };
-		9A89D8101FF01591007881E8 /* ShutDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShutDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A89D8101FF01591007881E8 /* Barrier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barrier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A89D8131FF01591007881E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A89D8151FF01591007881E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A89D8181FF01591007881E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9A89D81A1FF01591007881E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A89D81B1FF01591007881E8 /* Firewall_Control.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Firewall_Control.entitlements; sourceTree = "<group>"; };
-		9A89D8201FF01591007881E8 /* ShutDownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShutDownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A89D8201FF01591007881E8 /* BarrierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarrierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A89D8241FF01592007881E8 /* Firewall_ControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firewall_ControlTests.swift; sourceTree = "<group>"; };
 		9A89D8261FF01592007881E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A89D82B1FF01592007881E8 /* ShutDownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShutDownUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A89D82B1FF01592007881E8 /* BarrierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarrierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A89D82F1FF01592007881E8 /* Firewall_ControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firewall_ControlUITests.swift; sourceTree = "<group>"; };
 		9A89D8311FF01592007881E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9F51B220183D5900057DEC /* ShutDown-app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ShutDown-app.png"; sourceTree = "<group>"; };
@@ -87,6 +89,8 @@
 		9AB1D2D4202DF9F800DD8DC9 /* blueutil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blueutil.m; sourceTree = "<group>"; };
 		9AB1D2D6202DFA4200DD8DC9 /* blueutil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blueutil.h; sourceTree = "<group>"; };
 		9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesStore.swift; sourceTree = "<group>"; };
+		9AD137FC205E696600396465 /* FirewallStealthEnable.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallStealthEnable.sh; sourceTree = "<group>"; };
+		9AD137FD205E696600396465 /* FirewallStealthDisable.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallStealthDisable.sh; sourceTree = "<group>"; };
 		9AD44E1720543B9E00F0BCFB /* FirewallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirewallManager.swift; sourceTree = "<group>"; };
 		9ADCD29D20384DE00071D17B /* ProcessAccessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProcessAccessor.h; path = "Firewall Control/ProcessAccess/ProcessAccessor.h"; sourceTree = SOURCE_ROOT; };
 		9ADCD29E20384DE00071D17B /* ProcessAccessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ProcessAccessor.m; path = "Firewall Control/ProcessAccess/ProcessAccessor.m"; sourceTree = SOURCE_ROOT; };
@@ -162,9 +166,9 @@
 		9A89D8111FF01591007881E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A89D8101FF01591007881E8 /* ShutDown.app */,
-				9A89D8201FF01591007881E8 /* ShutDownTests.xctest */,
-				9A89D82B1FF01592007881E8 /* ShutDownUITests.xctest */,
+				9A89D8101FF01591007881E8 /* Barrier.app */,
+				9A89D8201FF01591007881E8 /* BarrierTests.xctest */,
+				9A89D82B1FF01592007881E8 /* BarrierUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,6 +232,8 @@
 				9A2F41132024BA1F00EF8783 /* FirewallStatus.sh */,
 				9A2F410F2024B7E900EF8783 /* FirewallDisable.sh */,
 				9A2F41102024B7E900EF8783 /* FirewallEnable.sh */,
+				9AD137FD205E696600396465 /* FirewallStealthDisable.sh */,
+				9AD137FC205E696600396465 /* FirewallStealthEnable.sh */,
 			);
 			path = iSightManager;
 			sourceTree = "<group>";
@@ -253,9 +259,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9A89D80F1FF01591007881E8 /* ShutDown */ = {
+		9A89D80F1FF01591007881E8 /* Barrier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9A89D8341FF01592007881E8 /* Build configuration list for PBXNativeTarget "ShutDown" */;
+			buildConfigurationList = 9A89D8341FF01592007881E8 /* Build configuration list for PBXNativeTarget "Barrier" */;
 			buildPhases = (
 				9A89D80C1FF01591007881E8 /* Sources */,
 				9A89D80D1FF01591007881E8 /* Frameworks */,
@@ -265,14 +271,14 @@
 			);
 			dependencies = (
 			);
-			name = ShutDown;
+			name = Barrier;
 			productName = "Firewall Control";
-			productReference = 9A89D8101FF01591007881E8 /* ShutDown.app */;
+			productReference = 9A89D8101FF01591007881E8 /* Barrier.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9A89D81F1FF01591007881E8 /* ShutDownTests */ = {
+		9A89D81F1FF01591007881E8 /* BarrierTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9A89D8371FF01592007881E8 /* Build configuration list for PBXNativeTarget "ShutDownTests" */;
+			buildConfigurationList = 9A89D8371FF01592007881E8 /* Build configuration list for PBXNativeTarget "BarrierTests" */;
 			buildPhases = (
 				9A89D81C1FF01591007881E8 /* Sources */,
 				9A89D81D1FF01591007881E8 /* Frameworks */,
@@ -283,14 +289,14 @@
 			dependencies = (
 				9A89D8221FF01591007881E8 /* PBXTargetDependency */,
 			);
-			name = ShutDownTests;
+			name = BarrierTests;
 			productName = "Firewall ControlTests";
-			productReference = 9A89D8201FF01591007881E8 /* ShutDownTests.xctest */;
+			productReference = 9A89D8201FF01591007881E8 /* BarrierTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9A89D82A1FF01592007881E8 /* ShutDownUITests */ = {
+		9A89D82A1FF01592007881E8 /* BarrierUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9A89D83A1FF01592007881E8 /* Build configuration list for PBXNativeTarget "ShutDownUITests" */;
+			buildConfigurationList = 9A89D83A1FF01592007881E8 /* Build configuration list for PBXNativeTarget "BarrierUITests" */;
 			buildPhases = (
 				9A89D8271FF01592007881E8 /* Sources */,
 				9A89D8281FF01592007881E8 /* Frameworks */,
@@ -301,9 +307,9 @@
 			dependencies = (
 				9A89D82D1FF01592007881E8 /* PBXTargetDependency */,
 			);
-			name = ShutDownUITests;
+			name = BarrierUITests;
 			productName = "Firewall ControlUITests";
-			productReference = 9A89D82B1FF01592007881E8 /* ShutDownUITests.xctest */;
+			productReference = 9A89D82B1FF01592007881E8 /* BarrierUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -337,7 +343,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9A89D80B1FF01591007881E8 /* Build configuration list for PBXProject "ShutDown" */;
+			buildConfigurationList = 9A89D80B1FF01591007881E8 /* Build configuration list for PBXProject "Barrier" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -350,9 +356,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9A89D80F1FF01591007881E8 /* ShutDown */,
-				9A89D81F1FF01591007881E8 /* ShutDownTests */,
-				9A89D82A1FF01592007881E8 /* ShutDownUITests */,
+				9A89D80F1FF01591007881E8 /* Barrier */,
+				9A89D81F1FF01591007881E8 /* BarrierTests */,
+				9A89D82A1FF01592007881E8 /* BarrierUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -365,6 +371,8 @@
 				9A2F41112024B7E900EF8783 /* FirewallDisable.sh in Resources */,
 				9A35BD622022D91300316C59 /* ProfileUninstaller.sh in Resources */,
 				9A89D8161FF01591007881E8 /* Assets.xcassets in Resources */,
+				9AD137FE205E696600396465 /* FirewallStealthEnable.sh in Resources */,
+				9AD137FF205E696600396465 /* FirewallStealthDisable.sh in Resources */,
 				9A2F41142024BA1F00EF8783 /* FirewallStatus.sh in Resources */,
 				9A752C182014FE7C00A39BA7 /* mute_sript.scpt in Resources */,
 				9A752C192014FE7C00A39BA7 /* volume_sript.scpt in Resources */,
@@ -433,12 +441,12 @@
 /* Begin PBXTargetDependency section */
 		9A89D8221FF01591007881E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9A89D80F1FF01591007881E8 /* ShutDown */;
+			target = 9A89D80F1FF01591007881E8 /* Barrier */;
 			targetProxy = 9A89D8211FF01591007881E8 /* PBXContainerItemProxy */;
 		};
 		9A89D82D1FF01592007881E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9A89D80F1FF01591007881E8 /* ShutDown */;
+			target = 9A89D80F1FF01591007881E8 /* Barrier */;
 			targetProxy = 9A89D82C1FF01592007881E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -609,7 +617,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.satendra.Firewall-ControlTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShutDown.app/Contents/MacOS/ShutDown";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Barrier.app/Contents/MacOS/Barrier";
 			};
 			name = Debug;
 		};
@@ -625,7 +633,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.satendra.Firewall-ControlTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShutDown.app/Contents/MacOS/ShutDown";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Barrier.app/Contents/MacOS/Barrier";
 			};
 			name = Release;
 		};
@@ -662,7 +670,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9A89D80B1FF01591007881E8 /* Build configuration list for PBXProject "ShutDown" */ = {
+		9A89D80B1FF01591007881E8 /* Build configuration list for PBXProject "Barrier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A89D8321FF01592007881E8 /* Debug */,
@@ -671,7 +679,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9A89D8341FF01592007881E8 /* Build configuration list for PBXNativeTarget "ShutDown" */ = {
+		9A89D8341FF01592007881E8 /* Build configuration list for PBXNativeTarget "Barrier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A89D8351FF01592007881E8 /* Debug */,
@@ -680,7 +688,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9A89D8371FF01592007881E8 /* Build configuration list for PBXNativeTarget "ShutDownTests" */ = {
+		9A89D8371FF01592007881E8 /* Build configuration list for PBXNativeTarget "BarrierTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A89D8381FF01592007881E8 /* Debug */,
@@ -689,7 +697,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9A89D83A1FF01592007881E8 /* Build configuration list for PBXNativeTarget "ShutDownUITests" */ = {
+		9A89D83A1FF01592007881E8 /* Build configuration list for PBXNativeTarget "BarrierUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A89D83B1FF01592007881E8 /* Debug */,

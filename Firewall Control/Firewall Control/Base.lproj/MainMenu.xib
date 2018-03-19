@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,14 +13,14 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ShutDown" customModuleProvider="target">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Barrier" customModuleProvider="target">
             <connections>
                 <outlet property="menu" destination="qhc-zf-WvQ" id="C2m-Ed-WU5"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <menu id="qhc-zf-WvQ" userLabel="Menu Bar Options" customClass="MenuBarActionHandler" customModule="ShutDown" customModuleProvider="target">
+        <menu id="qhc-zf-WvQ" userLabel="Menu Bar Options" customClass="MenuBarActionHandler" customModule="Barrier" customModuleProvider="target">
             <items>
                 <menuItem title="Master Switch" enabled="NO" id="Y2u-1q-rpk">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -56,6 +57,12 @@
                         <action selector="firewallOffClicked:" target="qhc-zf-WvQ" id="AMb-vj-f3M"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Enable Stealth Mode" id="NP0-mM-W67">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Block All" id="wen-AU-y9g">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
                 <menuItem title="Open Firewall Preferences" id="pJ1-ZY-Wmz">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -63,29 +70,31 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="PvT-BZ-yoj"/>
-                <menuItem title="Quit ShutDown" keyEquivalent="q" id="5Jb-f6-ixP">
+                <menuItem title="Quit Barrier" keyEquivalent="q" id="5Jb-f6-ixP">
                     <connections>
                         <action selector="didClickQuitApp:" target="qhc-zf-WvQ" id="UUM-Jl-6Q7"/>
                     </connections>
                 </menuItem>
             </items>
             <connections>
+                <outlet property="blockAll" destination="wen-AU-y9g" id="2fo-Rp-nDC"/>
                 <outlet property="cameraOff" destination="eb6-mm-Puf" id="1cM-v2-Ke9"/>
                 <outlet property="firewallOff" destination="ILC-Dn-fHp" id="smK-8n-QCT"/>
                 <outlet property="firewallPrefrence" destination="pJ1-ZY-Wmz" id="HOc-7f-E9z"/>
                 <outlet property="masterSwitch" destination="XIQ-vV-rkW" id="fNb-hb-S8U"/>
                 <outlet property="micOff" destination="FHZ-X7-W1k" id="3dc-oG-lGD"/>
                 <outlet property="quitApp" destination="5Jb-f6-ixP" id="74V-xd-gOu"/>
+                <outlet property="stealthMode" destination="NP0-mM-W67" id="Tbd-zZ-cFl"/>
             </connections>
             <point key="canvasLocation" x="484" y="529"/>
         </menu>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="ShutDown" id="1Xt-HY-uBw">
+                <menuItem title="Barrier" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="ShutDown" systemMenu="apple" id="uQy-DD-JDr">
+                    <menu key="submenu" title="Barrier" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
-                            <menuItem title="About ShutDown" id="5kV-Vb-QxS">
+                            <menuItem title="About Barrier" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
@@ -99,7 +108,7 @@
                                 <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                            <menuItem title="Hide ShutDown" keyEquivalent="h" id="Olw-nP-bQN">
+                            <menuItem title="Hide Barrier" keyEquivalent="h" id="Olw-nP-bQN">
                                 <connections>
                                     <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
                                 </connections>
@@ -117,7 +126,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                            <menuItem title="Quit ShutDown" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Quit Barrier" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -730,7 +739,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                         <items>
-                            <menuItem title="ShutDown Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                            <menuItem title="Barrier Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
                                 </connections>
@@ -740,11 +749,11 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="ShutDown" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="Barrier" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>

@@ -38,3 +38,40 @@ Block all incoming traffic
 
  */
 
+class FirewallManager: NSObject {
+    
+    static func globalFirewallStatus() -> Bool {
+        let paths = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .systemDomainMask, true)
+        var path: String = paths[0]
+        path = "\(path)/\("Preferences/com.apple.alf.plist")"
+        path = path.replacingOccurrences(of: "/System", with: "")
+        let url = URL(fileURLWithPath: path)
+        let dict = Dictionary<String, AnyObject>.contentsOf(path: url)
+        
+        //        let _dictionary = [AnyHashable: Any](contentsOfFile: path)
+        // firewall status
+        //        let status = Int(_dictionary["globalstate"] ) ?? 0
+        if let status = dict["globalstate"] as? Int {
+            return status == 1
+        }
+        return false
+    }
+
+    static func stealthModeStatus() -> Bool {
+        let paths = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .systemDomainMask, true)
+        var path: String = paths[0]
+        path = "\(path)/\("Preferences/com.apple.alf.plist")"
+        path = path.replacingOccurrences(of: "/System", with: "")
+        let url = URL(fileURLWithPath: path)
+        let dict = Dictionary<String, AnyObject>.contentsOf(path: url)
+        
+        //        let _dictionary = [AnyHashable: Any](contentsOfFile: path)
+        // firewall status
+        //        let status = Int(_dictionary["globalstate"] ) ?? 0
+        if let status = dict["stealthenabled"] as? Int {
+            return status == 1
+        }
+        return false
+    }
+
+}

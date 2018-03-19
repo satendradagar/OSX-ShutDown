@@ -3,61 +3,61 @@
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "Shut-Down-16.png",
+      "filename" : "Barrier-16.png",
       "scale" : "1x"
     },
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "Shut-Down-16@2x.png",
+      "filename" : "Barrier-16@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "Shut-Down-32.png",
+      "filename" : "Barrier-32.png",
       "scale" : "1x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "Shut-Down-32@2x.png",
+      "filename" : "Barrier-32@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "Shut-Down-128.png",
+      "filename" : "Barrier-128.png",
       "scale" : "1x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "Shut-Down-128@2x.png",
+      "filename" : "Barrier-128@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "Shut-Down-256.png",
+      "filename" : "Barrier-256.png",
       "scale" : "1x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "Shut-Down-256@2x.png",
+      "filename" : "Barrier-256@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "Shut-Down-512.png",
+      "filename" : "Barrier-512.png",
       "scale" : "1x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "Shut-Down-512@2x.png",
+      "filename" : "Barrier-512@2x.png",
       "scale" : "2x"
     }
   ],

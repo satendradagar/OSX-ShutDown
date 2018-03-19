@@ -22,6 +22,10 @@ class MenuBarActionHandler: NSMenu {
     
     @IBOutlet weak var firewallOff: NSMenuItem!
     
+    @IBOutlet var stealthMode: NSMenuItem!//Optional, conditional
+    
+    @IBOutlet var blockAll: NSMenuItem!//Optional, conditional
+    
     @IBOutlet weak var firewallPrefrence: NSMenuItem!
     
     @IBOutlet weak var quitApp: NSMenuItem!
@@ -205,15 +209,30 @@ class MenuBarActionHandler: NSMenu {
         if status == false {
             self.firewallOff.title = "Turn On Firewall"
             self.statusItem?.image = #imageLiteral(resourceName: "toolbar_Off")
+            self.stealthMode.isHidden = true
+            self.blockAll.isHidden = true
 
         }
         else{
             self.firewallOff.title = "Turn Off Firewall"
             self.statusItem?.image = #imageLiteral(resourceName: "toolbar_On")
-
+            self.stealthMode.isHidden = false
+            self.blockAll.isHidden = false
+            updateMenuForStealthMode()
         }
     }
-    
+
+    func updateMenuForStealthMode() {
+        
+        let status = FirewallManager.stealthModeStatus()
+        if status == false {
+            self.stealthMode.title = "Enable stealth mode "
+        }
+        else{
+            self.stealthMode.title = "Disable stealth mode "
+        }
+    }
+
     func updateMenuForMasterSwitch() {
         
         let status = MasterSwitchController.sharedInstance.isPowered
