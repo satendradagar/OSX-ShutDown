@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9A0B57D3201DA7CF00A7002B /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B57D1201DA7CF00A7002B /* STPrivilegedTask.m */; };
 		9A0B57D4201DA7CF00A7002B /* TaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B57D2201DA7CF00A7002B /* TaskManager.m */; };
+		9A2E1A31206122E50028CD02 /* FirewallBlockAll.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2E1A2F206122E50028CD02 /* FirewallBlockAll.sh */; };
+		9A2E1A32206122E50028CD02 /* FirewallUnBlockAll.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2E1A30206122E50028CD02 /* FirewallUnBlockAll.sh */; };
 		9A2E4796202334A100AA0457 /* isightdisabler5.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 9A2E4795202334A100AA0457 /* isightdisabler5.scpt */; };
 		9A2F41112024B7E900EF8783 /* FirewallDisable.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2F410F2024B7E900EF8783 /* FirewallDisable.sh */; };
 		9A2F41122024B7E900EF8783 /* FirewallEnable.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2F41102024B7E900EF8783 /* FirewallEnable.sh */; };
@@ -17,6 +19,7 @@
 		9A35BD622022D91300316C59 /* ProfileUninstaller.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A35BD602022D91200316C59 /* ProfileUninstaller.sh */; };
 		9A35BD632022D91300316C59 /* ProfileInstaller.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A35BD612022D91300316C59 /* ProfileInstaller.sh */; };
 		9A4A2E872035EA3000C606D3 /* NSUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A2E862035EA2F00C606D3 /* NSUtilities.swift */; };
+		9A6C89652062A6E100E3466F /* FirewallStatusBlockAll.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A6C89642062A6E100E3466F /* FirewallStatusBlockAll.sh */; };
 		9A6FF41F1FFD1F8B00756E0C /* MenuBarActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FF41E1FFD1F8B00756E0C /* MenuBarActionHandler.swift */; };
 		9A752C152014EEE700A39BA7 /* MuteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A752C142014EEE700A39BA7 /* MuteManager.swift */; };
 		9A752C182014FE7C00A39BA7 /* mute_sript.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 9A752C162014FE7C00A39BA7 /* mute_sript.scpt */; };
@@ -59,6 +62,8 @@
 		9A0B57D1201DA7CF00A7002B /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPrivilegedTask.m; sourceTree = "<group>"; };
 		9A0B57D2201DA7CF00A7002B /* TaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskManager.m; sourceTree = "<group>"; };
 		9A0B57D5201DB16B00A7002B /* ShutDown-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShutDown-Bridging-Header.h"; sourceTree = "<group>"; };
+		9A2E1A2F206122E50028CD02 /* FirewallBlockAll.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallBlockAll.sh; sourceTree = "<group>"; };
+		9A2E1A30206122E50028CD02 /* FirewallUnBlockAll.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallUnBlockAll.sh; sourceTree = "<group>"; };
 		9A2E4795202334A100AA0457 /* isightdisabler5.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = isightdisabler5.scpt; sourceTree = "<group>"; };
 		9A2F410F2024B7E900EF8783 /* FirewallDisable.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallDisable.sh; sourceTree = "<group>"; };
 		9A2F41102024B7E900EF8783 /* FirewallEnable.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallEnable.sh; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 		9A35BD602022D91200316C59 /* ProfileUninstaller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ProfileUninstaller.sh; sourceTree = "<group>"; };
 		9A35BD612022D91300316C59 /* ProfileInstaller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ProfileInstaller.sh; sourceTree = "<group>"; };
 		9A4A2E862035EA2F00C606D3 /* NSUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUtilities.swift; sourceTree = "<group>"; };
+		9A6C89642062A6E100E3466F /* FirewallStatusBlockAll.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallStatusBlockAll.sh; sourceTree = "<group>"; };
 		9A6FF41E1FFD1F8B00756E0C /* MenuBarActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarActionHandler.swift; sourceTree = "<group>"; };
 		9A752C142014EEE700A39BA7 /* MuteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteManager.swift; sourceTree = "<group>"; };
 		9A752C162014FE7C00A39BA7 /* mute_sript.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mute_sript.scpt; sourceTree = "<group>"; };
@@ -180,7 +186,7 @@
 				9A4A2E862035EA2F00C606D3 /* NSUtilities.swift */,
 				9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */,
 				9AB1D2D1202DE1C200DD8DC9 /* MasterSwitchController */,
-				9A9F51B320184A3700057DEC /* iSightManager */,
+				9A9F51B320184A3700057DEC /* iSightManager&Scripts */,
 				9A89D8131FF01591007881E8 /* AppDelegate.swift */,
 				9A0B57CE201DA7CF00A7002B /* TaskManager */,
 				9A752C132014EE8900A39BA7 /* MuteManager */,
@@ -222,7 +228,7 @@
 			path = "Firewall Control/Docs";
 			sourceTree = "<group>";
 		};
-		9A9F51B320184A3700057DEC /* iSightManager */ = {
+		9A9F51B320184A3700057DEC /* iSightManager&Scripts */ = {
 			isa = PBXGroup;
 			children = (
 				9A9F51B420184A6D00057DEC /* camera-disabler.mobileconfig */,
@@ -234,8 +240,11 @@
 				9A2F41102024B7E900EF8783 /* FirewallEnable.sh */,
 				9AD137FD205E696600396465 /* FirewallStealthDisable.sh */,
 				9AD137FC205E696600396465 /* FirewallStealthEnable.sh */,
+				9A2E1A2F206122E50028CD02 /* FirewallBlockAll.sh */,
+				9A2E1A30206122E50028CD02 /* FirewallUnBlockAll.sh */,
+				9A6C89642062A6E100E3466F /* FirewallStatusBlockAll.sh */,
 			);
-			path = iSightManager;
+			path = "iSightManager&Scripts";
 			sourceTree = "<group>";
 		};
 		9AB1D2D1202DE1C200DD8DC9 /* MasterSwitchController */ = {
@@ -368,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A6C89652062A6E100E3466F /* FirewallStatusBlockAll.sh in Resources */,
 				9A2F41112024B7E900EF8783 /* FirewallDisable.sh in Resources */,
 				9A35BD622022D91300316C59 /* ProfileUninstaller.sh in Resources */,
 				9A89D8161FF01591007881E8 /* Assets.xcassets in Resources */,
@@ -378,8 +388,10 @@
 				9A752C192014FE7C00A39BA7 /* volume_sript.scpt in Resources */,
 				9A89D8191FF01591007881E8 /* MainMenu.xib in Resources */,
 				9A2E4796202334A100AA0457 /* isightdisabler5.scpt in Resources */,
+				9A2E1A32206122E50028CD02 /* FirewallUnBlockAll.sh in Resources */,
 				9A2F41122024B7E900EF8783 /* FirewallEnable.sh in Resources */,
 				9A9F51B520184A6D00057DEC /* camera-disabler.mobileconfig in Resources */,
+				9A2E1A31206122E50028CD02 /* FirewallBlockAll.sh in Resources */,
 				9A35BD632022D91300316C59 /* ProfileInstaller.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

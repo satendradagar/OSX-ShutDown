@@ -149,6 +149,45 @@ class MenuBarActionHandler: NSMenu {
         }
     }
 
+    @IBAction func stealthModeClicked(_ sender: NSMenuItem) {
+        
+        let status = FirewallManager.stealthModeStatus()
+        if status == true{
+            TaskManager.runScript("FirewallStealthDisable", withArgs: [], responseHandling: { (message) in
+                print("\(String(describing: message))")
+            }) { (task) in
+                self.updateMenuForFirewall()
+            }
+        }
+        else{
+            TaskManager.runScript("FirewallStealthEnable", withArgs: [], responseHandling: { (message) in
+                print("\(String(describing: message))")
+            }) { (task) in
+                self.updateMenuForFirewall()
+            }
+        }
+    }
+
+    @IBAction func blockAllClicked(_ sender: NSMenuItem) {
+      
+        let status = FirewallManager.blockAllModeStatus()
+
+        if status == true{
+            TaskManager.runScript("FirewallUnBlockAll", withArgs: [], responseHandling: { (message) in
+                print("\(String(describing: message))")
+            }) { (task) in
+//                self.updateMenuForFirewall()
+            }
+        }
+        else{
+            TaskManager.runScript("FirewallBlockAll", withArgs: [], responseHandling: { (message) in
+                print("\(String(describing: message))")
+            }) { (task) in
+//                self.updateMenuForFirewall()
+            }
+        }
+    }
+
     @IBAction func firewallPrefrenceClicked(_ sender: NSMenuItem) {
         
         let urlString = "x-apple.systempreferences:com.apple.preference.security?Firewall"
@@ -198,7 +237,7 @@ class MenuBarActionHandler: NSMenu {
             // firewall status
 //        let status = Int(_dictionary["globalstate"] ) ?? 0
         if let status = dict["globalstate"] as? Int {
-            return status == 1
+            return status != 0
         }
         return false
     }
@@ -219,9 +258,21 @@ class MenuBarActionHandler: NSMenu {
             self.stealthMode.isHidden = false
             self.blockAll.isHidden = false
             updateMenuForStealthMode()
+            updateMenuForBlockAll()
         }
     }
-
+    
+    func updateMenuForBlockAll() {
+        
+        let status = FirewallManager.blockAllModeStatus()
+        if status == false {
+            self.blockAll.title = "Block All"
+        }
+        else{
+            self.blockAll.title = "Unblock All"
+        }
+    }
+    
     func updateMenuForStealthMode() {
         
         let status = FirewallManager.stealthModeStatus()
