@@ -9,6 +9,7 @@
 import Foundation
 import Cocoa
 import AVFoundation
+//https://apple.stackexchange.com/questions/313373/block-specific-apps-on-macos
 
 class MenuBarActionHandler: NSMenu {
 
@@ -98,7 +99,7 @@ class MenuBarActionHandler: NSMenu {
             if (pidsToKill.count > 0){
                 
                 //"Are you sure you want to kill apps:\(processNames)"
-                let reply = NSUtilities.dialogOKCancel(question: "One or more apps are already using the Camera", text: "Do you want to Force Quit all apps using the Camera?")
+                let reply = NSUtilities.dialogOKCancel(question: "One or more apps are already using the Camera", text: "Do you want to Force Quit all apps using the Camera?\nSelecting Cancel will only apply to applications that are not currently using the camera.")
                 if reply == true{
                     for pid in pidsToKill {
                         let app = NSRunningApplication.init(processIdentifier: pid_t(pid))

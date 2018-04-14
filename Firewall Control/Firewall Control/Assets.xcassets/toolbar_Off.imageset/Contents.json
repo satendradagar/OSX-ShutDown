@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "mac",
-      "filename" : "Shut-Down-status-menu-18-black.png",
+      "filename" : "Barrier-status-menu-18-black.png",
       "scale" : "1x"
     },
     {
       "idiom" : "mac",
-      "filename" : "Shut-Down-status-menu-18@2x-black.png",
+      "filename" : "Barrier-status-menu-18@2x-black.png",
       "scale" : "2x"
     }
   ],
