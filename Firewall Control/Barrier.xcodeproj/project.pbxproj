@@ -585,15 +585,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CZN3YZZ7V5;
 				INFOPLIST_FILE = "Firewall Control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.satendra.Firewall-Control";
+				PRODUCT_BUNDLE_IDENTIFIER = com.128bittech.barrier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "6b9aaad1-0e41-4529-9bfb-edfcc89a37ff";
+				PROVISIONING_PROFILE_SPECIFIER = "Barrier DevID";
 				SWIFT_OBJC_BRIDGING_HEADER = "Firewall Control/ShutDown-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
@@ -603,15 +605,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CZN3YZZ7V5;
 				INFOPLIST_FILE = "Firewall Control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.satendra.Firewall-Control";
+				PRODUCT_BUNDLE_IDENTIFIER = com.128bittech.barrier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "6b9aaad1-0e41-4529-9bfb-edfcc89a37ff";
+				PROVISIONING_PROFILE_SPECIFIER = "Barrier DevID";
 				SWIFT_OBJC_BRIDGING_HEADER = "Firewall Control/ShutDown-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};

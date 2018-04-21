@@ -11,6 +11,13 @@ import Cocoa
 import AVFoundation
 //https://apple.stackexchange.com/questions/313373/block-specific-apps-on-macos
 
+/*
+ sudo spctl --add --label "DeniedApps" /Applications/Adium.app
+ 
+ spctl --remove --label "DeniedApps"
+ spctl --remove --label "ApprovedApps"
+ */
+
 class MenuBarActionHandler: NSMenu {
 
     weak var statusItem: NSStatusItem?
@@ -87,7 +94,7 @@ class MenuBarActionHandler: NSMenu {
             for pid in pidSet! {
                 let app = NSRunningApplication.init(processIdentifier: pid_t(pid))
                 if let name = app?.localizedName{
-                    if name == "ShutDown"{
+                    if name == "Barrier"{
                         continue
                     }
                     pidsToKill.append(pid)
@@ -278,10 +285,10 @@ class MenuBarActionHandler: NSMenu {
         
         let status = FirewallManager.stealthModeStatus()
         if status == false {
-            self.stealthMode.title = "Enable stealth mode "
+            self.stealthMode.title = "Enable Stealth Mode "
         }
         else{
-            self.stealthMode.title = "Disable stealth mode "
+            self.stealthMode.title = "Disable Stealth Mode "
         }
     }
 
