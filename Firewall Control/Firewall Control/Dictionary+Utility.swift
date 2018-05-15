@@ -9,10 +9,21 @@
 import Foundation
 
 extension Dictionary {
-    static func contentsOf(path: URL) -> Dictionary<String, AnyObject> {
-        let data = try! Data(contentsOf: path)
-        let plist = try! PropertyListSerialization.propertyList(from: data, options: .mutableContainers, format: nil)
+    static func contentsOf(path: URL) -> Dictionary<String, Any> {
+        if let data = try? Data(contentsOf: path){
+            if let plist = try? PropertyListSerialization.propertyList(from: data, options: .mutableContainers, format: nil)
+            {
+                return (plist as? [String: Any] ) ?? [String: Any]()
+            }
+        }
         
-        return plist as! [String: AnyObject]
+        return [String: Any]()
     }
+    
+    func write(atPath path:URL) throws {
+        
+        let data = try PropertyListSerialization.data(fromPropertyList: self, format: .xml, options: 0)
+        try data.write(to: path)
+    }
+
 }

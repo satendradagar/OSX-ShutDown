@@ -22,6 +22,12 @@ class MenuBarActionHandler: NSMenu {
 
     weak var statusItem: NSStatusItem?
 
+     @IBOutlet weak var masterSwitchHeader: NSMenuItem!
+    
+    @IBOutlet weak var eyeSpyHeader: NSMenuItem!
+    
+    @IBOutlet weak var firewallHeader: NSMenuItem!
+
     @IBOutlet weak var masterSwitch: NSMenuItem!
     
     @IBOutlet weak var cameraOff: NSMenuItem!
@@ -302,6 +308,33 @@ class MenuBarActionHandler: NSMenu {
             self.masterSwitch.title = "Disconnect Internet and Bluetooth"
         }
     }
+    
+    func showInactiveMenuOnly()  {
+        masterSwitchHeader.isHidden = true
+        eyeSpyHeader.isHidden = true
+        firewallHeader.isHidden = true
+        masterSwitch.isHidden = true
+        cameraOff.isHidden = true
+        micOff.isHidden = true
+        firewallOff.isHidden = true
+        stealthMode.isHidden = true
+        blockAll.isHidden = true
+        firewallPrefrence.isHidden = true
+    }
+    
+    func showActiveMenuOnly()  {
+        masterSwitchHeader.isHidden = false
+        eyeSpyHeader.isHidden = false
+        firewallHeader.isHidden = false
+        masterSwitch.isHidden = false
+        cameraOff.isHidden = false
+        micOff.isHidden = false
+        firewallOff.isHidden = false
+        stealthMode.isHidden = false
+        blockAll.isHidden = false
+        firewallPrefrence.isHidden = false
+    }
+
 }
 
 extension MenuBarActionHandler : NSMenuDelegate{

@@ -1,10 +1,11 @@
 //
-//  AppDelegate.swift
-//  Firewall Control
+//  SerialAppDelegate.swift
+//  Barrier Serial
 //
-//  Created by Satendra Dagar on 24/12/17.
-//  Copyright © 2017 Satendra Dagar. All rights reserved.
+//  Created by Satendra Dagar on 06/05/18.
+//  Copyright © 2018 Satendra Dagar. All rights reserved.
 //
+
 /*
  PFCTL
  
@@ -35,23 +36,34 @@ import Foundation
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var menu: MenuBarActionHandler!
-    var isApplicationActive = true;
+    var registrationController:MCRegistrationViewController?
+
     var statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        
-        setupMenuBarMenu()
-    }
 
+        setupMenuBarMenu()
+
+        if isApplicationActivated() {
+            print("Already active");
+
+        }
+        else{
+            self.menu.showInactiveMenuOnly()
+
+            showRegistrationWindow(nil)
+        }
+    }
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
+    
     func setupMenuBarMenu() -> Void {
-
+        
         statusItem.menu = menu //set the menu
         //        statusItem.title = "Firewall Control"
         menu.statusItem = statusItem
@@ -63,8 +75,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //        statusItem.title = "Firewall Control"
         menu.statusItem = statusItem
         menu.updateMenuForFirewall()
-
+        
     }
-
+    
+    func isActiveProduct(){
+        setupMenuBarMenu()
+    }
 }
 

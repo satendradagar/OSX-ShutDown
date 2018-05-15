@@ -85,9 +85,12 @@
             <connections>
                 <outlet property="blockAll" destination="wen-AU-y9g" id="2fo-Rp-nDC"/>
                 <outlet property="cameraOff" destination="eb6-mm-Puf" id="1cM-v2-Ke9"/>
+                <outlet property="eyeSpyHeader" destination="cIH-iM-8v9" id="OGV-i9-4xw"/>
+                <outlet property="firewallHeader" destination="Gy1-W4-6Rl" id="LLe-he-TXx"/>
                 <outlet property="firewallOff" destination="ILC-Dn-fHp" id="smK-8n-QCT"/>
                 <outlet property="firewallPrefrence" destination="pJ1-ZY-Wmz" id="HOc-7f-E9z"/>
                 <outlet property="masterSwitch" destination="XIQ-vV-rkW" id="fNb-hb-S8U"/>
+                <outlet property="masterSwitchHeader" destination="Y2u-1q-rpk" id="omR-cQ-T6r"/>
                 <outlet property="micOff" destination="FHZ-X7-W1k" id="3dc-oG-lGD"/>
                 <outlet property="quitApp" destination="5Jb-f6-ixP" id="74V-xd-gOu"/>
                 <outlet property="stealthMode" destination="NP0-mM-W67" id="Tbd-zZ-cFl"/>
@@ -759,7 +762,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
