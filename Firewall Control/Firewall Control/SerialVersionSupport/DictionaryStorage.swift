@@ -30,7 +30,7 @@ class DictionaryStorage: NSObject {
     static func applicationSupportFilePath() -> String? {
         let paths = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)
         let applicationSupportDirectory = paths.first
-        let filePath = URL(fileURLWithPath: applicationSupportDirectory ?? "").appendingPathComponent("gds_Reg.content").path
+        let filePath = URL(fileURLWithPath: applicationSupportDirectory ?? "").appendingPathComponent("barrier_serial_Reg.content").path
         return filePath
     }
     

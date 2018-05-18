@@ -245,12 +245,12 @@
 			children = (
 				9A394FE52097744B007AA3DD /* RegistrationWindowController.m */,
 				9A394FE62097744B007AA3DD /* registration_window_background.jpg */,
-				9A394FE72097744B007AA3DD /* ChimpKit.m */,
 				9A394FE82097744B007AA3DD /* RejectIcon.png */,
 				9A394FE92097744B007AA3DD /* AcceptIcon.png */,
 				9A394FEA2097744B007AA3DD /* RegistrationWindowController.h */,
 				9A394FEB2097744B007AA3DD /* RegistrationWindow.xib */,
 				9A394FEC2097744B007AA3DD /* ChimpKit.h */,
+				9A394FE72097744B007AA3DD /* ChimpKit.m */,
 			);
 			path = "Chimpkit Registration";
 			sourceTree = "<group>";

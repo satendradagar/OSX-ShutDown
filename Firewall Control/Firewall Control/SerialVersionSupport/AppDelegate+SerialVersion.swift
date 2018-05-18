@@ -29,7 +29,7 @@ extension AppDelegate{
             //        registrationController.apiKey = @"da779503246c9f44aa569845d0b00c40-us4";
             //        registrationController.ListID = @"198b8a5e00";
             //
-            registrationController?.apiKey = "f6279f04c3532a6b2af0bb4bf79232e4-us4"
+            registrationController?.apiKey = "da779503246c9f44aa569845d0b00c40-us4"
             registrationController?.listID = "3ab8bb99a3"
 //            if GDStudioAppDelegate.isAppstoreVersion() {
 //                registrationController.defaultKey = "GDS1-MACA-PPST-ORE1"

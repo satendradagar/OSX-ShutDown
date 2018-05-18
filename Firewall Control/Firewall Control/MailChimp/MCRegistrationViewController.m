@@ -219,8 +219,8 @@ typedef void(^REgistrationCompletion)(NSDictionary *info);
 }
 
 -(void)registerData{
-        //<YOUR_API_KEY>
-    ChimpKitV3 *ck = [[ChimpKitV3 alloc] initWithDelegate:self andApiKey:self.apiKey];
+        //
+    ChimpKit *ck = [[ChimpKit alloc] initWithDelegate:self andApiKey:self.apiKey];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
         //YOUR_LIST_ID
     [params setValue:self.ListID forKey:@"id"];
@@ -232,10 +232,10 @@ typedef void(^REgistrationCompletion)(NSDictionary *info);
     [mergeVars setValue:self.firstNameText.stringValue forKey:@"FNAME"];
     [mergeVars setValue:self.lastNameText.stringValue forKey:@"LNAME"];
     [mergeVars setValue:self.serialText.stringValue forKey:@"Serial"];
-    NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    [dateFormatter setDateFormat:@"MM/dd/yy"];
-    NSString *str = [dateFormatter stringFromDate:[NSDate date]];
-    [mergeVars setValue:str forKey:_mergeDateKey];
+//    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+//    [dateFormatter setDateFormat:@"MM/dd/yy"];
+//    NSString *str = [dateFormatter stringFromDate:[NSDate date]];
+//    [mergeVars setValue:str forKey:_mergeDateKey];
     [mergeVars setValue:optinEmailButton.state?@"YES":@"NO" forKey:@"OPTIN"];
 //    if (optinEmailButton.enabled) {
 //        [params setValue:@"subscribed" forKey:@"status"];
@@ -246,7 +246,7 @@ typedef void(^REgistrationCompletion)(NSDictionary *info);
 //    }
 //
     [params setValue:mergeVars forKey:@"merge_vars"];
-    [ck callApiMethod:@"members" withParams:params];
+    [ck callApiMethod:@"listSubscribe" withParams:params];
 }
 
 #pragma -Mark MailChimp Delegate
