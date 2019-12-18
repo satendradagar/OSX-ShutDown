@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9A0B57D3201DA7CF00A7002B /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B57D1201DA7CF00A7002B /* STPrivilegedTask.m */; };
 		9A0B57D4201DA7CF00A7002B /* TaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B57D2201DA7CF00A7002B /* TaskManager.m */; };
+		9A2E1A31206122E50028CD02 /* FirewallBlockAll.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2E1A2F206122E50028CD02 /* FirewallBlockAll.sh */; };
+		9A2E1A32206122E50028CD02 /* FirewallUnBlockAll.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2E1A30206122E50028CD02 /* FirewallUnBlockAll.sh */; };
 		9A2E4796202334A100AA0457 /* isightdisabler5.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 9A2E4795202334A100AA0457 /* isightdisabler5.scpt */; };
 		9A2F41112024B7E900EF8783 /* FirewallDisable.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2F410F2024B7E900EF8783 /* FirewallDisable.sh */; };
 		9A2F41122024B7E900EF8783 /* FirewallEnable.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2F41102024B7E900EF8783 /* FirewallEnable.sh */; };
@@ -17,16 +19,57 @@
 		9A35BD622022D91300316C59 /* ProfileUninstaller.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A35BD602022D91200316C59 /* ProfileUninstaller.sh */; };
 		9A35BD632022D91300316C59 /* ProfileInstaller.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A35BD612022D91300316C59 /* ProfileInstaller.sh */; };
 		9A4A2E872035EA3000C606D3 /* NSUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A2E862035EA2F00C606D3 /* NSUtilities.swift */; };
+		9A6C89652062A6E100E3466F /* FirewallStatusBlockAll.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A6C89642062A6E100E3466F /* FirewallStatusBlockAll.sh */; };
 		9A6FF41F1FFD1F8B00756E0C /* MenuBarActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FF41E1FFD1F8B00756E0C /* MenuBarActionHandler.swift */; };
 		9A752C152014EEE700A39BA7 /* MuteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A752C142014EEE700A39BA7 /* MuteManager.swift */; };
 		9A752C182014FE7C00A39BA7 /* mute_sript.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 9A752C162014FE7C00A39BA7 /* mute_sript.scpt */; };
 		9A752C192014FE7C00A39BA7 /* volume_sript.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 9A752C172014FE7C00A39BA7 /* volume_sript.scpt */; };
+		9A876A09209C9BF10076EBCF /* DictionaryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8769FD209C28400076EBCF /* DictionaryStorage.swift */; };
 		9A89D8141FF01591007881E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89D8131FF01591007881E8 /* AppDelegate.swift */; };
 		9A89D8161FF01591007881E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A89D8151FF01591007881E8 /* Assets.xcassets */; };
 		9A89D8191FF01591007881E8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A89D8171FF01591007881E8 /* MainMenu.xib */; };
 		9A89D8251FF01592007881E8 /* Firewall_ControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89D8241FF01592007881E8 /* Firewall_ControlTests.swift */; };
 		9A89D8301FF01592007881E8 /* Firewall_ControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89D82F1FF01592007881E8 /* Firewall_ControlUITests.swift */; };
 		9A9F51B520184A6D00057DEC /* camera-disabler.mobileconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9A9F51B420184A6D00057DEC /* camera-disabler.mobileconfig */; };
+		9AA7FF5E2098B17A0002C98C /* FirewallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD44E1720543B9E00F0BCFB /* FirewallManager.swift */; };
+		9AA7FF5F2098B17A0002C98C /* NSUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A2E862035EA2F00C606D3 /* NSUtilities.swift */; };
+		9AA7FF602098B17A0002C98C /* MCRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A394FDA209773F5007AA3DD /* MCRegistrationViewController.m */; };
+		9AA7FF612098B17A0002C98C /* ChimpKitV3.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A394FD9209773F5007AA3DD /* ChimpKitV3.m */; };
+		9AA7FF622098B17A0002C98C /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A394FDE209773F5007AA3DD /* NSData+Base64.m */; };
+		9AA7FF632098B17A0002C98C /* MasterSwitchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1D2D2202DE1D400DD8DC9 /* MasterSwitchController.swift */; };
+		9AA7FF642098B17A0002C98C /* Dictionary+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F41152024C24000EF8783 /* Dictionary+Utility.swift */; };
+		9AA7FF652098B17A0002C98C /* MenuBarActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FF41E1FFD1F8B00756E0C /* MenuBarActionHandler.swift */; };
+		9AA7FF662098B17A0002C98C /* PreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */; };
+		9AA7FF672098B17A0002C98C /* RegistrationWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A394FE52097744B007AA3DD /* RegistrationWindowController.m */; };
+		9AA7FF682098B17A0002C98C /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B57D1201DA7CF00A7002B /* STPrivilegedTask.m */; };
+		9AA7FF692098B17A0002C98C /* ChimpKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A394FE72097744B007AA3DD /* ChimpKit.m */; };
+		9AA7FF6A2098B17A0002C98C /* blueutil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1D2D4202DF9F800DD8DC9 /* blueutil.m */; };
+		9AA7FF6B2098B17A0002C98C /* ProcessAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADCD29E20384DE00071D17B /* ProcessAccessor.m */; };
+		9AA7FF6C2098B17A0002C98C /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A394FDB209773F5007AA3DD /* NSString+MD5.m */; };
+		9AA7FF6D2098B17A0002C98C /* MuteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A752C142014EEE700A39BA7 /* MuteManager.swift */; };
+		9AA7FF6E2098B17A0002C98C /* TaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B57D2201DA7CF00A7002B /* TaskManager.m */; };
+		9AA7FF712098B17A0002C98C /* FirewallStatusBlockAll.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A6C89642062A6E100E3466F /* FirewallStatusBlockAll.sh */; };
+		9AA7FF722098B17A0002C98C /* FirewallDisable.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2F410F2024B7E900EF8783 /* FirewallDisable.sh */; };
+		9AA7FF732098B17A0002C98C /* ProfileUninstaller.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A35BD602022D91200316C59 /* ProfileUninstaller.sh */; };
+		9AA7FF742098B17A0002C98C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A89D8151FF01591007881E8 /* Assets.xcassets */; };
+		9AA7FF752098B17A0002C98C /* RejectIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A394FE82097744B007AA3DD /* RejectIcon.png */; };
+		9AA7FF762098B17A0002C98C /* FirewallStealthEnable.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9AD137FC205E696600396465 /* FirewallStealthEnable.sh */; };
+		9AA7FF772098B17A0002C98C /* FirewallStealthDisable.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9AD137FD205E696600396465 /* FirewallStealthDisable.sh */; };
+		9AA7FF782098B17A0002C98C /* FirewallStatus.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2F41132024BA1F00EF8783 /* FirewallStatus.sh */; };
+		9AA7FF792098B17A0002C98C /* mute_sript.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 9A752C162014FE7C00A39BA7 /* mute_sript.scpt */; };
+		9AA7FF7A2098B17A0002C98C /* volume_sript.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 9A752C172014FE7C00A39BA7 /* volume_sript.scpt */; };
+		9AA7FF7B2098B17A0002C98C /* AcceptIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A394FE92097744B007AA3DD /* AcceptIcon.png */; };
+		9AA7FF7C2098B17A0002C98C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A89D8171FF01591007881E8 /* MainMenu.xib */; };
+		9AA7FF7D2098B17A0002C98C /* MCRegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A394FD6209773F5007AA3DD /* MCRegistrationViewController.xib */; };
+		9AA7FF7E2098B17A0002C98C /* isightdisabler5.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 9A2E4795202334A100AA0457 /* isightdisabler5.scpt */; };
+		9AA7FF7F2098B17A0002C98C /* registration_window_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A394FE62097744B007AA3DD /* registration_window_background.jpg */; };
+		9AA7FF802098B17A0002C98C /* RegistrationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A394FEB2097744B007AA3DD /* RegistrationWindow.xib */; };
+		9AA7FF812098B17A0002C98C /* FirewallUnBlockAll.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2E1A30206122E50028CD02 /* FirewallUnBlockAll.sh */; };
+		9AA7FF822098B17A0002C98C /* FirewallEnable.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2F41102024B7E900EF8783 /* FirewallEnable.sh */; };
+		9AA7FF832098B17A0002C98C /* camera-disabler.mobileconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9A9F51B420184A6D00057DEC /* camera-disabler.mobileconfig */; };
+		9AA7FF842098B17A0002C98C /* FirewallBlockAll.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A2E1A2F206122E50028CD02 /* FirewallBlockAll.sh */; };
+		9AA7FF852098B17A0002C98C /* ProfileInstaller.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9A35BD612022D91300316C59 /* ProfileInstaller.sh */; };
+		9AA7FF8D2098BE2D0002C98C /* AppDelegate+SerialVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA7FF8C2098BE2D0002C98C /* AppDelegate+SerialVersion.swift */; };
 		9AB1D2D3202DE1D400DD8DC9 /* MasterSwitchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1D2D2202DE1D400DD8DC9 /* MasterSwitchController.swift */; };
 		9AB1D2D5202DF9F900DD8DC9 /* blueutil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1D2D4202DF9F800DD8DC9 /* blueutil.m */; };
 		9AC5D31C20222A59002CC0E2 /* PreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */; };
@@ -34,6 +77,9 @@
 		9AD137FF205E696600396465 /* FirewallStealthDisable.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9AD137FD205E696600396465 /* FirewallStealthDisable.sh */; };
 		9AD44E1820543B9E00F0BCFB /* FirewallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD44E1720543B9E00F0BCFB /* FirewallManager.swift */; };
 		9ADCD29F20384DE00071D17B /* ProcessAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADCD29E20384DE00071D17B /* ProcessAccessor.m */; };
+		9ADD5EC0209ED81600B5B9BB /* SSBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADD5EBE209ED81600B5B9BB /* SSBool.swift */; };
+		9ADD5EC2209EE23800B5B9BB /* SSString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADD5EBF209ED81600B5B9BB /* SSString.swift */; };
+		9ADD5EC8209F6E6800B5B9BB /* SerialAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADD5EC7209F6E6800B5B9BB /* SerialAppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +105,8 @@
 		9A0B57D1201DA7CF00A7002B /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPrivilegedTask.m; sourceTree = "<group>"; };
 		9A0B57D2201DA7CF00A7002B /* TaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskManager.m; sourceTree = "<group>"; };
 		9A0B57D5201DB16B00A7002B /* ShutDown-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShutDown-Bridging-Header.h"; sourceTree = "<group>"; };
+		9A2E1A2F206122E50028CD02 /* FirewallBlockAll.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallBlockAll.sh; sourceTree = "<group>"; };
+		9A2E1A30206122E50028CD02 /* FirewallUnBlockAll.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallUnBlockAll.sh; sourceTree = "<group>"; };
 		9A2E4795202334A100AA0457 /* isightdisabler5.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = isightdisabler5.scpt; sourceTree = "<group>"; };
 		9A2F410F2024B7E900EF8783 /* FirewallDisable.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallDisable.sh; sourceTree = "<group>"; };
 		9A2F41102024B7E900EF8783 /* FirewallEnable.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallEnable.sh; sourceTree = "<group>"; };
@@ -66,11 +114,30 @@
 		9A2F41152024C24000EF8783 /* Dictionary+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Utility.swift"; sourceTree = "<group>"; };
 		9A35BD602022D91200316C59 /* ProfileUninstaller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ProfileUninstaller.sh; sourceTree = "<group>"; };
 		9A35BD612022D91300316C59 /* ProfileInstaller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ProfileInstaller.sh; sourceTree = "<group>"; };
+		9A394FD5209773F5007AA3DD /* ChimpKitV3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChimpKitV3.h; sourceTree = "<group>"; };
+		9A394FD6209773F5007AA3DD /* MCRegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCRegistrationViewController.xib; sourceTree = "<group>"; };
+		9A394FD7209773F5007AA3DD /* MCRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRegistrationViewController.h; sourceTree = "<group>"; };
+		9A394FD8209773F5007AA3DD /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		9A394FD9209773F5007AA3DD /* ChimpKitV3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChimpKitV3.m; sourceTree = "<group>"; };
+		9A394FDA209773F5007AA3DD /* MCRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRegistrationViewController.m; sourceTree = "<group>"; };
+		9A394FDB209773F5007AA3DD /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		9A394FDD209773F5007AA3DD /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		9A394FDE209773F5007AA3DD /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		9A394FE52097744B007AA3DD /* RegistrationWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationWindowController.m; sourceTree = "<group>"; };
+		9A394FE62097744B007AA3DD /* registration_window_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = registration_window_background.jpg; sourceTree = "<group>"; };
+		9A394FE72097744B007AA3DD /* ChimpKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChimpKit.m; sourceTree = "<group>"; };
+		9A394FE82097744B007AA3DD /* RejectIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RejectIcon.png; sourceTree = "<group>"; };
+		9A394FE92097744B007AA3DD /* AcceptIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AcceptIcon.png; sourceTree = "<group>"; };
+		9A394FEA2097744B007AA3DD /* RegistrationWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationWindowController.h; sourceTree = "<group>"; };
+		9A394FEB2097744B007AA3DD /* RegistrationWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationWindow.xib; sourceTree = "<group>"; };
+		9A394FEC2097744B007AA3DD /* ChimpKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChimpKit.h; sourceTree = "<group>"; };
 		9A4A2E862035EA2F00C606D3 /* NSUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUtilities.swift; sourceTree = "<group>"; };
+		9A6C89642062A6E100E3466F /* FirewallStatusBlockAll.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirewallStatusBlockAll.sh; sourceTree = "<group>"; };
 		9A6FF41E1FFD1F8B00756E0C /* MenuBarActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarActionHandler.swift; sourceTree = "<group>"; };
 		9A752C142014EEE700A39BA7 /* MuteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteManager.swift; sourceTree = "<group>"; };
 		9A752C162014FE7C00A39BA7 /* mute_sript.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mute_sript.scpt; sourceTree = "<group>"; };
 		9A752C172014FE7C00A39BA7 /* volume_sript.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = volume_sript.scpt; sourceTree = "<group>"; };
+		9A8769FD209C28400076EBCF /* DictionaryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryStorage.swift; sourceTree = "<group>"; };
 		9A89D8101FF01591007881E8 /* Barrier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barrier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A89D8131FF01591007881E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A89D8151FF01591007881E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +152,10 @@
 		9A89D8311FF01592007881E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9F51B220183D5900057DEC /* ShutDown-app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ShutDown-app.png"; sourceTree = "<group>"; };
 		9A9F51B420184A6D00057DEC /* camera-disabler.mobileconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "camera-disabler.mobileconfig"; sourceTree = "<group>"; };
+		9AA7FF892098B17A0002C98C /* Barrier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barrier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AA7FF8A2098B17A0002C98C /* Barrier copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Barrier copy-Info.plist"; path = "/Users/satendrasingh/Documents/Sample Apps/JSON/OSX Shut/Firewall Control/Barrier copy-Info.plist"; sourceTree = "<absolute>"; };
+		9AA7FF8C2098BE2D0002C98C /* AppDelegate+SerialVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+SerialVersion.swift"; sourceTree = "<group>"; };
+		9AA7FFC42098CE000002C98C /* Barrier-Serial-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Barrier-Serial-Bridging-Header.h"; sourceTree = "<group>"; };
 		9AB1D2D2202DE1D400DD8DC9 /* MasterSwitchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterSwitchController.swift; sourceTree = "<group>"; };
 		9AB1D2D4202DF9F800DD8DC9 /* blueutil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blueutil.m; sourceTree = "<group>"; };
 		9AB1D2D6202DFA4200DD8DC9 /* blueutil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blueutil.h; sourceTree = "<group>"; };
@@ -94,6 +165,9 @@
 		9AD44E1720543B9E00F0BCFB /* FirewallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirewallManager.swift; sourceTree = "<group>"; };
 		9ADCD29D20384DE00071D17B /* ProcessAccessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProcessAccessor.h; path = "Firewall Control/ProcessAccess/ProcessAccessor.h"; sourceTree = SOURCE_ROOT; };
 		9ADCD29E20384DE00071D17B /* ProcessAccessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ProcessAccessor.m; path = "Firewall Control/ProcessAccess/ProcessAccessor.m"; sourceTree = SOURCE_ROOT; };
+		9ADD5EBE209ED81600B5B9BB /* SSBool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSBool.swift; sourceTree = "<group>"; };
+		9ADD5EBF209ED81600B5B9BB /* SSString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSString.swift; sourceTree = "<group>"; };
+		9ADD5EC7209F6E6800B5B9BB /* SerialAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialAppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +192,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9AA7FF6F2098B17A0002C98C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -132,6 +213,46 @@
 				9ADCD29E20384DE00071D17B /* ProcessAccessor.m */,
 			);
 			path = TaskManager;
+			sourceTree = "<group>";
+		};
+		9A394FD4209773F5007AA3DD /* MailChimp */ = {
+			isa = PBXGroup;
+			children = (
+				9A394FE42097744B007AA3DD /* Chimpkit Registration */,
+				9A394FD6209773F5007AA3DD /* MCRegistrationViewController.xib */,
+				9A394FD7209773F5007AA3DD /* MCRegistrationViewController.h */,
+				9A394FDA209773F5007AA3DD /* MCRegistrationViewController.m */,
+				9A394FD5209773F5007AA3DD /* ChimpKitV3.h */,
+				9A394FD9209773F5007AA3DD /* ChimpKitV3.m */,
+				9A394FD8209773F5007AA3DD /* NSString+MD5.h */,
+				9A394FDB209773F5007AA3DD /* NSString+MD5.m */,
+				9A394FDC209773F5007AA3DD /* NSData_Base64 */,
+			);
+			path = MailChimp;
+			sourceTree = "<group>";
+		};
+		9A394FDC209773F5007AA3DD /* NSData_Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				9A394FDD209773F5007AA3DD /* NSData+Base64.h */,
+				9A394FDE209773F5007AA3DD /* NSData+Base64.m */,
+			);
+			path = NSData_Base64;
+			sourceTree = "<group>";
+		};
+		9A394FE42097744B007AA3DD /* Chimpkit Registration */ = {
+			isa = PBXGroup;
+			children = (
+				9A394FE52097744B007AA3DD /* RegistrationWindowController.m */,
+				9A394FE62097744B007AA3DD /* registration_window_background.jpg */,
+				9A394FE82097744B007AA3DD /* RejectIcon.png */,
+				9A394FE92097744B007AA3DD /* AcceptIcon.png */,
+				9A394FEA2097744B007AA3DD /* RegistrationWindowController.h */,
+				9A394FEB2097744B007AA3DD /* RegistrationWindow.xib */,
+				9A394FEC2097744B007AA3DD /* ChimpKit.h */,
+				9A394FE72097744B007AA3DD /* ChimpKit.m */,
+			);
+			path = "Chimpkit Registration";
 			sourceTree = "<group>";
 		};
 		9A6FF41D1FFD1F8B00756E0C /* MenuBarActionHandler */ = {
@@ -160,6 +281,7 @@
 				9A89D8231FF01592007881E8 /* Firewall ControlTests */,
 				9A89D82E1FF01592007881E8 /* Firewall ControlUITests */,
 				9A89D8111FF01591007881E8 /* Products */,
+				9AA7FF8A2098B17A0002C98C /* Barrier copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +291,7 @@
 				9A89D8101FF01591007881E8 /* Barrier.app */,
 				9A89D8201FF01591007881E8 /* BarrierTests.xctest */,
 				9A89D82B1FF01592007881E8 /* BarrierUITests.xctest */,
+				9AA7FF892098B17A0002C98C /* Barrier.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,11 +299,14 @@
 		9A89D8121FF01591007881E8 /* Firewall Control */ = {
 			isa = PBXGroup;
 			children = (
+				9ADD5EBD209ED81600B5B9BB /* Cocoa Custom */,
+				9AA7FF8B2098BE150002C98C /* SerialVersionSupport */,
+				9A394FD4209773F5007AA3DD /* MailChimp */,
 				9AD44E1620543B8B00F0BCFB /* FirewallManager */,
 				9A4A2E862035EA2F00C606D3 /* NSUtilities.swift */,
 				9AC5D31B20222A58002CC0E2 /* PreferencesStore.swift */,
 				9AB1D2D1202DE1C200DD8DC9 /* MasterSwitchController */,
-				9A9F51B320184A3700057DEC /* iSightManager */,
+				9A9F51B320184A3700057DEC /* iSightManager&Scripts */,
 				9A89D8131FF01591007881E8 /* AppDelegate.swift */,
 				9A0B57CE201DA7CF00A7002B /* TaskManager */,
 				9A752C132014EE8900A39BA7 /* MuteManager */,
@@ -222,7 +348,7 @@
 			path = "Firewall Control/Docs";
 			sourceTree = "<group>";
 		};
-		9A9F51B320184A3700057DEC /* iSightManager */ = {
+		9A9F51B320184A3700057DEC /* iSightManager&Scripts */ = {
 			isa = PBXGroup;
 			children = (
 				9A9F51B420184A6D00057DEC /* camera-disabler.mobileconfig */,
@@ -234,8 +360,22 @@
 				9A2F41102024B7E900EF8783 /* FirewallEnable.sh */,
 				9AD137FD205E696600396465 /* FirewallStealthDisable.sh */,
 				9AD137FC205E696600396465 /* FirewallStealthEnable.sh */,
+				9A2E1A2F206122E50028CD02 /* FirewallBlockAll.sh */,
+				9A2E1A30206122E50028CD02 /* FirewallUnBlockAll.sh */,
+				9A6C89642062A6E100E3466F /* FirewallStatusBlockAll.sh */,
 			);
-			path = iSightManager;
+			path = "iSightManager&Scripts";
+			sourceTree = "<group>";
+		};
+		9AA7FF8B2098BE150002C98C /* SerialVersionSupport */ = {
+			isa = PBXGroup;
+			children = (
+				9AA7FF8C2098BE2D0002C98C /* AppDelegate+SerialVersion.swift */,
+				9AA7FFC42098CE000002C98C /* Barrier-Serial-Bridging-Header.h */,
+				9A8769FD209C28400076EBCF /* DictionaryStorage.swift */,
+				9ADD5EC7209F6E6800B5B9BB /* SerialAppDelegate.swift */,
+			);
+			path = SerialVersionSupport;
 			sourceTree = "<group>";
 		};
 		9AB1D2D1202DE1C200DD8DC9 /* MasterSwitchController */ = {
@@ -254,6 +394,15 @@
 				9AD44E1720543B9E00F0BCFB /* FirewallManager.swift */,
 			);
 			path = FirewallManager;
+			sourceTree = "<group>";
+		};
+		9ADD5EBD209ED81600B5B9BB /* Cocoa Custom */ = {
+			isa = PBXGroup;
+			children = (
+				9ADD5EBE209ED81600B5B9BB /* SSBool.swift */,
+				9ADD5EBF209ED81600B5B9BB /* SSString.swift */,
+			);
+			path = "Cocoa Custom";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +461,23 @@
 			productReference = 9A89D82B1FF01592007881E8 /* BarrierUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		9AA7FF5B2098B17A0002C98C /* Barrier Serial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AA7FF862098B17A0002C98C /* Build configuration list for PBXNativeTarget "Barrier Serial" */;
+			buildPhases = (
+				9AA7FF5C2098B17A0002C98C /* Sources */,
+				9AA7FF6F2098B17A0002C98C /* Frameworks */,
+				9AA7FF702098B17A0002C98C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Barrier Serial";
+			productName = "Firewall Control";
+			productReference = 9AA7FF892098B17A0002C98C /* Barrier.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -341,6 +507,9 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 9A89D80F1FF01591007881E8;
 					};
+					9AA7FF5B2098B17A0002C98C = {
+						ProvisioningStyle = Manual;
+					};
 				};
 			};
 			buildConfigurationList = 9A89D80B1FF01591007881E8 /* Build configuration list for PBXProject "Barrier" */;
@@ -359,6 +528,7 @@
 				9A89D80F1FF01591007881E8 /* Barrier */,
 				9A89D81F1FF01591007881E8 /* BarrierTests */,
 				9A89D82A1FF01592007881E8 /* BarrierUITests */,
+				9AA7FF5B2098B17A0002C98C /* Barrier Serial */,
 			);
 		};
 /* End PBXProject section */
@@ -368,6 +538,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A6C89652062A6E100E3466F /* FirewallStatusBlockAll.sh in Resources */,
 				9A2F41112024B7E900EF8783 /* FirewallDisable.sh in Resources */,
 				9A35BD622022D91300316C59 /* ProfileUninstaller.sh in Resources */,
 				9A89D8161FF01591007881E8 /* Assets.xcassets in Resources */,
@@ -378,8 +549,10 @@
 				9A752C192014FE7C00A39BA7 /* volume_sript.scpt in Resources */,
 				9A89D8191FF01591007881E8 /* MainMenu.xib in Resources */,
 				9A2E4796202334A100AA0457 /* isightdisabler5.scpt in Resources */,
+				9A2E1A32206122E50028CD02 /* FirewallUnBlockAll.sh in Resources */,
 				9A2F41122024B7E900EF8783 /* FirewallEnable.sh in Resources */,
 				9A9F51B520184A6D00057DEC /* camera-disabler.mobileconfig in Resources */,
+				9A2E1A31206122E50028CD02 /* FirewallBlockAll.sh in Resources */,
 				9A35BD632022D91300316C59 /* ProfileInstaller.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +568,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AA7FF702098B17A0002C98C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AA7FF712098B17A0002C98C /* FirewallStatusBlockAll.sh in Resources */,
+				9AA7FF722098B17A0002C98C /* FirewallDisable.sh in Resources */,
+				9AA7FF732098B17A0002C98C /* ProfileUninstaller.sh in Resources */,
+				9AA7FF742098B17A0002C98C /* Assets.xcassets in Resources */,
+				9AA7FF752098B17A0002C98C /* RejectIcon.png in Resources */,
+				9AA7FF762098B17A0002C98C /* FirewallStealthEnable.sh in Resources */,
+				9AA7FF772098B17A0002C98C /* FirewallStealthDisable.sh in Resources */,
+				9AA7FF782098B17A0002C98C /* FirewallStatus.sh in Resources */,
+				9AA7FF792098B17A0002C98C /* mute_sript.scpt in Resources */,
+				9AA7FF7A2098B17A0002C98C /* volume_sript.scpt in Resources */,
+				9AA7FF7B2098B17A0002C98C /* AcceptIcon.png in Resources */,
+				9AA7FF7C2098B17A0002C98C /* MainMenu.xib in Resources */,
+				9AA7FF7D2098B17A0002C98C /* MCRegistrationViewController.xib in Resources */,
+				9AA7FF7E2098B17A0002C98C /* isightdisabler5.scpt in Resources */,
+				9AA7FF7F2098B17A0002C98C /* registration_window_background.jpg in Resources */,
+				9AA7FF802098B17A0002C98C /* RegistrationWindow.xib in Resources */,
+				9AA7FF812098B17A0002C98C /* FirewallUnBlockAll.sh in Resources */,
+				9AA7FF822098B17A0002C98C /* FirewallEnable.sh in Resources */,
+				9AA7FF832098B17A0002C98C /* camera-disabler.mobileconfig in Resources */,
+				9AA7FF842098B17A0002C98C /* FirewallBlockAll.sh in Resources */,
+				9AA7FF852098B17A0002C98C /* ProfileInstaller.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +617,7 @@
 				9AB1D2D5202DF9F900DD8DC9 /* blueutil.m in Sources */,
 				9ADCD29F20384DE00071D17B /* ProcessAccessor.m in Sources */,
 				9A752C152014EEE700A39BA7 /* MuteManager.swift in Sources */,
+				9ADD5EC0209ED81600B5B9BB /* SSBool.swift in Sources */,
 				9A0B57D4201DA7CF00A7002B /* TaskManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +635,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A89D8301FF01592007881E8 /* Firewall_ControlUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AA7FF5C2098B17A0002C98C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AA7FF5E2098B17A0002C98C /* FirewallManager.swift in Sources */,
+				9AA7FF5F2098B17A0002C98C /* NSUtilities.swift in Sources */,
+				9ADD5EC2209EE23800B5B9BB /* SSString.swift in Sources */,
+				9ADD5EC8209F6E6800B5B9BB /* SerialAppDelegate.swift in Sources */,
+				9AA7FF602098B17A0002C98C /* MCRegistrationViewController.m in Sources */,
+				9AA7FF612098B17A0002C98C /* ChimpKitV3.m in Sources */,
+				9AA7FF622098B17A0002C98C /* NSData+Base64.m in Sources */,
+				9AA7FF632098B17A0002C98C /* MasterSwitchController.swift in Sources */,
+				9AA7FF642098B17A0002C98C /* Dictionary+Utility.swift in Sources */,
+				9AA7FF652098B17A0002C98C /* MenuBarActionHandler.swift in Sources */,
+				9AA7FF662098B17A0002C98C /* PreferencesStore.swift in Sources */,
+				9AA7FF672098B17A0002C98C /* RegistrationWindowController.m in Sources */,
+				9AA7FF682098B17A0002C98C /* STPrivilegedTask.m in Sources */,
+				9AA7FF692098B17A0002C98C /* ChimpKit.m in Sources */,
+				9A876A09209C9BF10076EBCF /* DictionaryStorage.swift in Sources */,
+				9AA7FF6A2098B17A0002C98C /* blueutil.m in Sources */,
+				9AA7FF8D2098BE2D0002C98C /* AppDelegate+SerialVersion.swift in Sources */,
+				9AA7FF6B2098B17A0002C98C /* ProcessAccessor.m in Sources */,
+				9AA7FF6C2098B17A0002C98C /* NSString+MD5.m in Sources */,
+				9AA7FF6D2098B17A0002C98C /* MuteManager.swift in Sources */,
+				9AA7FF6E2098B17A0002C98C /* TaskManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,15 +807,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CZN3YZZ7V5;
 				INFOPLIST_FILE = "Firewall Control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.satendra.Firewall-Control";
+				PRODUCT_BUNDLE_IDENTIFIER = com.128bittech.barrier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "6b9aaad1-0e41-4529-9bfb-edfcc89a37ff";
+				PROVISIONING_PROFILE_SPECIFIER = "Barrier DevID";
 				SWIFT_OBJC_BRIDGING_HEADER = "Firewall Control/ShutDown-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
@@ -595,15 +827,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CZN3YZZ7V5;
 				INFOPLIST_FILE = "Firewall Control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.satendra.Firewall-Control";
+				PRODUCT_BUNDLE_IDENTIFIER = com.128bittech.barrier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "6b9aaad1-0e41-4529-9bfb-edfcc89a37ff";
+				PROVISIONING_PROFILE_SPECIFIER = "Barrier DevID";
 				SWIFT_OBJC_BRIDGING_HEADER = "Firewall Control/ShutDown-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
@@ -671,6 +905,46 @@
 			};
 			name = Release;
 		};
+		9AA7FF872098B17A0002C98C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = CZN3YZZ7V5;
+				INFOPLIST_FILE = "Barrier copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.128bittech.barrier;
+				PRODUCT_NAME = Barrier;
+				PROVISIONING_PROFILE = "6b9aaad1-0e41-4529-9bfb-edfcc89a37ff";
+				PROVISIONING_PROFILE_SPECIFIER = "Barrier DevID";
+				SWIFT_OBJC_BRIDGING_HEADER = "Firewall Control/SerialVersionSupport/Barrier-Serial-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		9AA7FF882098B17A0002C98C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = CZN3YZZ7V5;
+				INFOPLIST_FILE = "Barrier copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.128bittech.barrier;
+				PRODUCT_NAME = Barrier;
+				PROVISIONING_PROFILE = "6b9aaad1-0e41-4529-9bfb-edfcc89a37ff";
+				PROVISIONING_PROFILE_SPECIFIER = "Barrier DevID";
+				SWIFT_OBJC_BRIDGING_HEADER = "Firewall Control/SerialVersionSupport/Barrier-Serial-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -706,6 +980,15 @@
 			buildConfigurations = (
 				9A89D83B1FF01592007881E8 /* Debug */,
 				9A89D83C1FF01592007881E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AA7FF862098B17A0002C98C /* Build configuration list for PBXNativeTarget "Barrier Serial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AA7FF872098B17A0002C98C /* Debug */,
+				9AA7FF882098B17A0002C98C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -41,7 +41,7 @@ class MasterSwitchController: NSObject {
         catch {
             print("Something went wrong, are you feeling OK?")
             
-        }
+        };
         if status == true{
             BTSetPowerState(1)
 

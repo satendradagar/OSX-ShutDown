@@ -9,10 +9,24 @@
 import Foundation
 import Cocoa
 import AVFoundation
+//https://apple.stackexchange.com/questions/313373/block-specific-apps-on-macos
+
+/*
+ sudo spctl --add --label "DeniedApps" /Applications/Adium.app
+ 
+ spctl --remove --label "DeniedApps"
+ spctl --remove --label "ApprovedApps"
+ */
 
 class MenuBarActionHandler: NSMenu {
 
     weak var statusItem: NSStatusItem?
+
+     @IBOutlet weak var masterSwitchHeader: NSMenuItem!
+    
+    @IBOutlet weak var eyeSpyHeader: NSMenuItem!
+    
+    @IBOutlet weak var firewallHeader: NSMenuItem!
 
     @IBOutlet weak var masterSwitch: NSMenuItem!
     
@@ -86,7 +100,7 @@ class MenuBarActionHandler: NSMenu {
             for pid in pidSet! {
                 let app = NSRunningApplication.init(processIdentifier: pid_t(truncating: pid))
                 if let name = app?.localizedName{
-                    if name == "ShutDown"{
+                    if name == "Barrier"{
                         continue
                     }
                     pidsToKill.append(pid)
@@ -98,7 +112,7 @@ class MenuBarActionHandler: NSMenu {
             if (pidsToKill.count > 0){
                 
                 //"Are you sure you want to kill apps:\(processNames)"
-                let reply = NSUtilities.dialogOKCancel(question: "One or more apps are already using the Camera", text: "Do you want to Force Quit all apps using the Camera?")
+                let reply = NSUtilities.dialogOKCancel(question: "One or more apps are already using the Camera", text: "Do you want to Force Quit all apps using the Camera?\nSelecting Cancel will only apply to applications that are not currently using the camera.")
                 if reply == true{
                     for pid in pidsToKill {
                         let app = NSRunningApplication.init(processIdentifier: pid_t(truncating: pid))
@@ -146,6 +160,45 @@ class MenuBarActionHandler: NSMenu {
 
             }
 
+        }
+    }
+
+    @IBAction func stealthModeClicked(_ sender: NSMenuItem) {
+        
+        let status = FirewallManager.stealthModeStatus()
+        if status == true{
+            TaskManager.runScript("FirewallStealthDisable", withArgs: [], responseHandling: { (message) in
+                print("\(String(describing: message))")
+            }) { (task) in
+                self.updateMenuForFirewall()
+            }
+        }
+        else{
+            TaskManager.runScript("FirewallStealthEnable", withArgs: [], responseHandling: { (message) in
+                print("\(String(describing: message))")
+            }) { (task) in
+                self.updateMenuForFirewall()
+            }
+        }
+    }
+
+    @IBAction func blockAllClicked(_ sender: NSMenuItem) {
+      
+        let status = FirewallManager.blockAllModeStatus()
+
+        if status == true{
+            TaskManager.runScript("FirewallUnBlockAll", withArgs: [], responseHandling: { (message) in
+                print("\(String(describing: message))")
+            }) { (task) in
+//                self.updateMenuForFirewall()
+            }
+        }
+        else{
+            TaskManager.runScript("FirewallBlockAll", withArgs: [], responseHandling: { (message) in
+                print("\(String(describing: message))")
+            }) { (task) in
+//                self.updateMenuForFirewall()
+            }
         }
     }
 
@@ -198,7 +251,7 @@ class MenuBarActionHandler: NSMenu {
             // firewall status
 //        let status = Int(_dictionary["globalstate"] ) ?? 0
         if let status = dict["globalstate"] as? Int {
-            return status == 1
+            return status != 0
         }
         return false
     }
@@ -219,17 +272,29 @@ class MenuBarActionHandler: NSMenu {
             self.stealthMode.isHidden = false
             self.blockAll.isHidden = false
             updateMenuForStealthMode()
+            updateMenuForBlockAll()
         }
     }
-
+    
+    func updateMenuForBlockAll() {
+        
+        let status = FirewallManager.blockAllModeStatus()
+        if status == false {
+            self.blockAll.title = "Block All"
+        }
+        else{
+            self.blockAll.title = "Unblock All"
+        }
+    }
+    
     func updateMenuForStealthMode() {
         
         let status = FirewallManager.stealthModeStatus()
         if status == false {
-            self.stealthMode.title = "Enable stealth mode "
+            self.stealthMode.title = "Enable Stealth Mode "
         }
         else{
-            self.stealthMode.title = "Disable stealth mode "
+            self.stealthMode.title = "Disable Stealth Mode "
         }
     }
 
@@ -243,6 +308,33 @@ class MenuBarActionHandler: NSMenu {
             self.masterSwitch.title = "Disconnect Internet and Bluetooth"
         }
     }
+    
+    func showInactiveMenuOnly()  {
+        masterSwitchHeader.isHidden = true
+        eyeSpyHeader.isHidden = true
+        firewallHeader.isHidden = true
+        masterSwitch.isHidden = true
+        cameraOff.isHidden = true
+        micOff.isHidden = true
+        firewallOff.isHidden = true
+        stealthMode.isHidden = true
+        blockAll.isHidden = true
+        firewallPrefrence.isHidden = true
+    }
+    
+    func showActiveMenuOnly()  {
+        masterSwitchHeader.isHidden = false
+        eyeSpyHeader.isHidden = false
+        firewallHeader.isHidden = false
+        masterSwitch.isHidden = false
+        cameraOff.isHidden = false
+        micOff.isHidden = false
+        firewallOff.isHidden = false
+        stealthMode.isHidden = false
+        blockAll.isHidden = false
+        firewallPrefrence.isHidden = false
+    }
+
 }
 
 extension MenuBarActionHandler : NSMenuDelegate{

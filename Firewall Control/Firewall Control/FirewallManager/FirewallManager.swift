@@ -74,4 +74,19 @@ class FirewallManager: NSObject {
         return false
     }
 
+    static func blockAllModeStatus() -> Bool{
+        var msg :NSString?
+        var err :NSString?
+        
+        TaskManager.runScript("FirewallStatusBlockAll", withArguments: [], output: &msg, errorDescription:&err );
+        print("\(msg)\n")
+        print("\(err)\n")
+        if let response = msg {
+            if(response.contains("Block all DISABLED"))
+            {
+                return false
+            }
+        }
+        return true
+    }
 }
