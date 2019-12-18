@@ -37,7 +37,7 @@ int BTSetParamState(int state, int (*getter)(void), void (*setter)(int), char *n
 }
 
 // short names
-typedef int (*getterFunc)();
+typedef int (*getterFunc)(void);
 typedef bool (*setterFunc)(int);
 
 #define BTAvaliable IOBluetoothPreferencesAvailable

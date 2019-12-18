@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Firewall_Control
+@testable import Barrier
 
 class Firewall_ControlTests: XCTestCase {
     

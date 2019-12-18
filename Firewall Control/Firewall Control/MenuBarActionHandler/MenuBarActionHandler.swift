@@ -79,12 +79,12 @@ class MenuBarActionHandler: NSMenu {
 
             }
             let pidSet = ProcessAccessor.pidsAccessingPath("/Library/CoreMediaIO/Plug-Ins/DAL/AppleCamera.plugin/Contents/MacOS/AppleCamera")
-            print("\(pidSet)")
+            print("\(String(describing: pidSet))")
             var pidsToKill = [NSNumber]()
             var processNames = ""
             
             for pid in pidSet! {
-                let app = NSRunningApplication.init(processIdentifier: pid_t(pid))
+                let app = NSRunningApplication.init(processIdentifier: pid_t(truncating: pid))
                 if let name = app?.localizedName{
                     if name == "ShutDown"{
                         continue
@@ -93,7 +93,7 @@ class MenuBarActionHandler: NSMenu {
                     processNames.append(name)
                     processNames.append(", ")
                 }
-                print(app?.localizedName)
+                print(app?.localizedName ?? "")
             }
             if (pidsToKill.count > 0){
                 
@@ -101,7 +101,7 @@ class MenuBarActionHandler: NSMenu {
                 let reply = NSUtilities.dialogOKCancel(question: "One or more apps are already using the Camera", text: "Do you want to Force Quit all apps using the Camera?")
                 if reply == true{
                     for pid in pidsToKill {
-                        let app = NSRunningApplication.init(processIdentifier: pid_t(pid))
+                        let app = NSRunningApplication.init(processIdentifier: pid_t(truncating: pid))
                         app?.terminate()
                     }
                 }

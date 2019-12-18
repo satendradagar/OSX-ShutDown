@@ -43,7 +43,7 @@ class MuteManager: NSObject {
 //        var errors = [AnyHashable: Any]()
         var possibleError: NSDictionary?
 
-        let appleScript: NSAppleScript? = try NSAppleScript.init(contentsOf: fileUrl, error: &possibleError)
+        let appleScript: NSAppleScript? =  NSAppleScript.init(contentsOf: fileUrl, error: &possibleError)
         let res = (appleScript?.executeAndReturnError(&possibleError)) ?? NSAppleEventDescriptor()
         return res
 //        return (try? appleScript?.execute()) ?? NSAppleEventDescriptor()

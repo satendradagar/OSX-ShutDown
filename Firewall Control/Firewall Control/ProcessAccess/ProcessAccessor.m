@@ -51,7 +51,7 @@
     {
         
         if (pids)
-            free(pids),
+            (void)(free(pids)),
             pids = nil;
         
     }
