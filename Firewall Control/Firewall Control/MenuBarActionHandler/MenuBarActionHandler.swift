@@ -87,12 +87,13 @@ class MenuBarActionHandler: NSMenu {
         let status = !PreferencesStore.sharedInstance.cameraStatus()
         if true == status {
             
-            TaskManager.runScript("ProfileInstaller", withArgs: [], responseHandling: { (message) in
-                print("\(String(describing: message))")
-            }) { (task) in
 
+            var pidSet = ProcessAccessor.pidsAccessingPath("/Library/CoreMediaIO/Plug-Ins/DAL/AppleCamera.plugin/Contents/MacOS/AppleCamera")
+            
+            if pidSet!.count == 0 {
+                pidSet = ProcessAccessor.pidsAccessingPath("/System/Library/Frameworks/CoreMediaIO.framework/Versions/A/Resources/AppleCamera.plugin/Contents/MacOS/AppleCamera")
             }
-            let pidSet = ProcessAccessor.pidsAccessingPath("/Library/CoreMediaIO/Plug-Ins/DAL/AppleCamera.plugin/Contents/MacOS/AppleCamera")
+            
             print("\(String(describing: pidSet))")
             var pidsToKill = [NSNumber]()
             var processNames = ""
@@ -120,7 +121,11 @@ class MenuBarActionHandler: NSMenu {
                     }
                 }
             }
-            
+            TaskManager.runScript("ProfileInstaller", withArgs: [], responseHandling: { (message) in
+                print("\(String(describing: message))")
+            }) { (task) in
+
+            }
         }
         else{
             TaskManager.runScript("ProfileUninstaller", withArgs: [], responseHandling: { (message) in
