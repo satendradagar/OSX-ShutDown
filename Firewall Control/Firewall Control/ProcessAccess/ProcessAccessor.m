@@ -28,18 +28,25 @@
     listpidspathResult = proc_listpidspath(PROC_ALL_PIDS, 0,
                                            pathFileSystemRepresentation, PROC_LISTPIDSPATH_EXCLUDE_EVTONLY, nil, 0);
     
-    //    ALAssertOrPerform(listpidspathResult >= 0, goto cleanup);
-    
+//        ALAssertOrPerform(listpidspathResult >= 0, goto cleanup);
+    if (listpidspathResult <= 0) {
+        goto cleanup;
+    }
     pidsSize = (listpidspathResult ? listpidspathResult : 1);
     pids = malloc(pidsSize);
     
-    //    ALAssertOrPerform(pids, goto cleanup);
+    if (pids <= 0) {
+        goto cleanup;
+    }
+//        ALAssertOrPerform(pids, goto cleanup);
     
     listpidspathResult = proc_listpidspath(PROC_ALL_PIDS, 0,
                                            pathFileSystemRepresentation, PROC_LISTPIDSPATH_EXCLUDE_EVTONLY, pids,
                                            pidsSize);
-    
-    //    ALAssertOrPerform(listpidspathResult >= 0, goto cleanup);
+    if (listpidspathResult <= 0) {
+        goto cleanup;
+    }
+//        ALAssertOrPerform(listpidspathResult >= 0, goto cleanup);
     
     pidsCount = (listpidspathResult / sizeof(*pids));
     result = [NSMutableSet set];
@@ -47,11 +54,11 @@
     for (i = 0; i < pidsCount; i++)
         [result addObject: [NSNumber numberWithInt: pids[i]]];
     
-    // :
+     cleanup:
     {
-        
+        result = [NSMutableSet set];
         if (pids)
-            free(pids),
+            free(pids);
             pids = nil;
         
     }
