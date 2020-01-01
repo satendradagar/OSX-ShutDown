@@ -184,7 +184,7 @@
             if ([errorInfo valueForKey:NSAppleScriptErrorMessage])
                 errorDescription =  (NSString *)[errorInfo valueForKey:NSAppleScriptErrorMessage];
         }
-        handler(nil, errorDescription);
+        handler(nil, [NSError errorWithDomain:errorDescription code:123 userInfo:nil]);
         return NO;
     }
     else

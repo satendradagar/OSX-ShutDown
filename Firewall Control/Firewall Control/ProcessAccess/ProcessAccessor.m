@@ -16,7 +16,7 @@
     
     //    const char *pathFileSystemRepresentation = nil;
     int listpidspathResult = 0;
-    size_t pidsSize = 0;
+    int pidsSize = 0;
     pid_t *pids = nil;
     NSUInteger pidsCount = 0,
     i = 0;
@@ -26,41 +26,44 @@
     
     const char *pathFileSystemRepresentation = [path fileSystemRepresentation];
     listpidspathResult = proc_listpidspath(PROC_ALL_PIDS, 0,
-                                           pathFileSystemRepresentation, PROC_LISTPIDSPATH_EXCLUDE_EVTONLY, nil, 0);
+                                           pathFileSystemRepresentation, PROC_LISTPIDSPATH_EXCLUDE_EVTONLY, NULL, 0);
     
-//        ALAssertOrPerform(listpidspathResult >= 0, goto cleanup);
+
+    //    ALAssertOrPerform(listpidspathResult >= 0, goto cleanup);
+    result = [NSMutableSet set];
+
     if (listpidspathResult <= 0) {
         goto cleanup;
     }
     pidsSize = (listpidspathResult ? listpidspathResult : 1);
     pids = malloc(pidsSize);
     
-    if (pids <= 0) {
+    //    ALAssertOrPerform(pids, goto cleanup);
+    if (pids == nil) {
         goto cleanup;
     }
-//        ALAssertOrPerform(pids, goto cleanup);
-    
+
     listpidspathResult = proc_listpidspath(PROC_ALL_PIDS, 0,
                                            pathFileSystemRepresentation, PROC_LISTPIDSPATH_EXCLUDE_EVTONLY, pids,
                                            pidsSize);
+    
+//        ALAssertOrPerform(listpidspathResult >= 0, goto cleanup);
     if (listpidspathResult <= 0) {
         goto cleanup;
     }
-//        ALAssertOrPerform(listpidspathResult >= 0, goto cleanup);
-    
+
     pidsCount = (listpidspathResult / sizeof(*pids));
-    result = [NSMutableSet set];
     
     for (i = 0; i < pidsCount; i++)
         [result addObject: [NSNumber numberWithInt: pids[i]]];
     
-     cleanup:
+    cleanup :
     {
-        result = [NSMutableSet set];
         if (pids)
-            free(pids);
+        {
+            (void)(free(pids)),
             pids = nil;
-        
+        }
     }
     
     return result;

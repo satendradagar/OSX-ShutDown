@@ -88,13 +88,18 @@ class MenuBarActionHandler: NSMenu {
         if true == status {
             
 
-            let pidSet = ProcessAccessor.pidsAccessingPath("/Library/CoreMediaIO/Plug-Ins/DAL/AppleCamera.plugin/Contents/MacOS/AppleCamera")
-            print("\(pidSet)")
+            var pidSet = ProcessAccessor.pidsAccessingPath("/Library/CoreMediaIO/Plug-Ins/DAL/AppleCamera.plugin/Contents/MacOS/AppleCamera")
+            
+            if pidSet!.count == 0 {
+                pidSet = ProcessAccessor.pidsAccessingPath("/System/Library/Frameworks/CoreMediaIO.framework/Versions/A/Resources/AppleCamera.plugin/Contents/MacOS/AppleCamera")
+            }
+            
+            print("\(String(describing: pidSet))")
             var pidsToKill = [NSNumber]()
             var processNames = ""
             
             for pid in pidSet! {
-                let app = NSRunningApplication.init(processIdentifier: pid_t(pid))
+                let app = NSRunningApplication.init(processIdentifier: pid_t(truncating: pid))
                 if let name = app?.localizedName{
                     if name == "Barrier"{
                         continue
@@ -103,7 +108,7 @@ class MenuBarActionHandler: NSMenu {
                     processNames.append(name)
                     processNames.append(", ")
                 }
-                print(app?.localizedName)
+                print(app?.localizedName ?? "")
             }
             if (pidsToKill.count > 0){
                 
@@ -111,12 +116,11 @@ class MenuBarActionHandler: NSMenu {
                 let reply = NSUtilities.dialogOKCancel(question: "One or more apps are already using the Camera", text: "Do you want to Force Quit all apps using the Camera?\nSelecting Cancel will only apply to applications that are not currently using the camera.")
                 if reply == true{
                     for pid in pidsToKill {
-                        let app = NSRunningApplication.init(processIdentifier: pid_t(pid))
+                        let app = NSRunningApplication.init(processIdentifier: pid_t(truncating: pid))
                         app?.terminate()
                     }
                 }
             }
-            
             TaskManager.runScript("ProfileInstaller", withArgs: [], responseHandling: { (message) in
                 print("\(String(describing: message))")
             }) { (task) in
