@@ -169,6 +169,7 @@
 		9ADD5EBE209ED81600B5B9BB /* SSBool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSBool.swift; sourceTree = "<group>"; };
 		9ADD5EBF209ED81600B5B9BB /* SSString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSString.swift; sourceTree = "<group>"; };
 		9ADD5EC7209F6E6800B5B9BB /* SerialAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialAppDelegate.swift; sourceTree = "<group>"; };
+		9AFFA1CB23B878CA0010944D /* Build_PKG_Notarized_Only.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Build_PKG_Notarized_Only.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				9A20676223B1F49300E7CA39 /* Barrier.entitlements */,
+				9AFFA1CA23B878CA0010944D /* Packagescripts */,
 				9A89D8121FF01591007881E8 /* Firewall Control */,
 				9A9F51B120183D5900057DEC /* Docs */,
 				9A89D8231FF01592007881E8 /* Firewall ControlTests */,
@@ -405,6 +407,15 @@
 				9ADD5EBF209ED81600B5B9BB /* SSString.swift */,
 			);
 			path = "Cocoa Custom";
+			sourceTree = "<group>";
+		};
+		9AFFA1CA23B878CA0010944D /* Packagescripts */ = {
+			isa = PBXGroup;
+			children = (
+				9AFFA1CB23B878CA0010944D /* Build_PKG_Notarized_Only.sh */,
+			);
+			name = Packagescripts;
+			path = "Firewall Control/Packagescripts";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -814,11 +825,13 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = CZN3YZZ7V5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Firewall Control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.128bittech.barrier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6b9aaad1-0e41-4529-9bfb-edfcc89a37ff";
@@ -836,11 +849,13 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = CZN3YZZ7V5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Firewall Control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.128bittech.barrier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6b9aaad1-0e41-4529-9bfb-edfcc89a37ff";
@@ -916,16 +931,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Barrier.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = CZN3YZZ7V5;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Barrier copy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.128bittech.barrier;
 				PRODUCT_NAME = Barrier;
-				PROVISIONING_PROFILE = "6b9aaad1-0e41-4529-9bfb-edfcc89a37ff";
 				PROVISIONING_PROFILE_SPECIFIER = "Barrier DevID";
 				SWIFT_OBJC_BRIDGING_HEADER = "Firewall Control/SerialVersionSupport/Barrier-Serial-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -936,16 +954,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Barrier.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = CZN3YZZ7V5;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Barrier copy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.128bittech.barrier;
 				PRODUCT_NAME = Barrier;
-				PROVISIONING_PROFILE = "6b9aaad1-0e41-4529-9bfb-edfcc89a37ff";
 				PROVISIONING_PROFILE_SPECIFIER = "Barrier DevID";
 				SWIFT_OBJC_BRIDGING_HEADER = "Firewall Control/SerialVersionSupport/Barrier-Serial-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
